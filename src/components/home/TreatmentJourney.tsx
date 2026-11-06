@@ -41,7 +41,7 @@ const steps = [
     title: "Ergonomic Autonomy",
     subtitle: "Prevention & Self-Care",
     description:
-      "We equip you with desk ergonomic advice, stretching routines, and home exercise protocols to maintain your gains and permanently avoid recurrence.",
+      "We equip you with desk ergonomic advice, stretching routines, and home exercise protocols to maintain your mobility and reduce the likelihood of recurrence.",
     focusAreas: ["Desk Ergonomics", "Home Routine", "Preventive Habits"],
     icon: HeartHandshake,
   },
@@ -57,10 +57,10 @@ export function TreatmentJourney() {
             The Patient Care Pathway
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-dark leading-tight">
-            How We Guide You to Full Recovery
+            A Structured Pathway Toward Lasting Mobility
           </h2>
           <p className="mt-3 text-sm sm:text-base text-brand-muted leading-relaxed">
-            A structured, 4-phase clinical roadmap designed to transition you safely from acute pain to lasting functional independence.
+            A structured, 4-phase clinical roadmap designed to transition you safely from acute pain to functional independence.
           </p>
         </div>
 

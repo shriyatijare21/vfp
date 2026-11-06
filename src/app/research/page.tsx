@@ -133,13 +133,23 @@ export default function ResearchPage() {
         <Container className="space-y-10">
           <div className="max-w-3xl text-center sm:text-left">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-2">
-              Clinical Papers &amp; Inquiries
+              Clinical Inquiries &amp; Methodology
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-normal text-brand-dark leading-tight">
-              Current Research Inquiries &amp; Methodology
+              Academic Investigation Focus Areas
             </h2>
             <p className="mt-3 text-sm sm:text-base text-brand-muted leading-relaxed">
-              How academic inquiry directly shapes the clinical protocols delivered to patients in our Amravati clinic.
+              How contemporary musculoskeletal science directly informs the clinical care delivered to patients in our Amravati clinic.
+            </p>
+          </div>
+
+          {/* Academic Transparency Notice */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-brand-white border border-[#DECDB5] text-xs text-brand-charcoal space-y-1">
+            <p className="font-semibold text-brand-forest">
+              Academic Transparency &amp; Scholarly Scope:
+            </p>
+            <p className="text-brand-muted leading-relaxed">
+              The topics below represent Dr. Vaibhav Ashok Farande&apos;s active academic interests and ongoing scholarly investigations as a postgraduate scholar in the School of Health Sciences at Garden City University. They represent independent academic inquiry and do not constitute an institutional endorsement or formal hospital partnership. Formally published manuscripts will be linked directly to their respective publication DOIs upon client confirmation.
             </p>
           </div>
 

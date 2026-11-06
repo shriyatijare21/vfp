@@ -16,6 +16,7 @@ import {
   ArrowLeft,
   ChevronRight,
   Info,
+  ShieldAlert,
 } from "lucide-react";
 
 interface Props {
@@ -199,6 +200,20 @@ export default function ServiceDetailPage({ params }: Props) {
                   <Clock className="w-4 h-4 text-brand-gold shrink-0" />
                   <span>Dedicated one-on-one session with Dr. Vaibhav Farande</span>
                 </div>
+              </div>
+
+              {/* Clinical Assessment & Safety Precautions */}
+              <div className="p-6 sm:p-8 rounded-2xl bg-brand-white border border-[#DECDB5] shadow-sm space-y-3">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-forest">
+                  <ShieldAlert className="w-4 h-4 text-brand-gold shrink-0" />
+                  <span>Clinical Assessment &amp; Precautions</span>
+                </div>
+                <h3 className="font-serif text-xl font-bold text-brand-dark">
+                  Suitability &amp; Treatment Considerations
+                </h3>
+                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                  {service.precautions}
+                </p>
               </div>
 
               {/* Confirmation disclaimer if pending */}

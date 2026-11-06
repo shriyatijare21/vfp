@@ -65,7 +65,7 @@ export function WhyChooseUs() {
                 Our Clinical Commitment
               </div>
               <p className="text-xs text-brand-cream/85 leading-relaxed font-light">
-                No false promises of &ldquo;miracle overnight cures.&rdquo; We deliver transparent, scientifically validated rehabilitation aimed at lasting tissue resilience and pain-free living.
+                No false promises of &ldquo;instant overnight cures.&rdquo; We provide clear, evidence-informed rehabilitation aimed at restoring movement comfort and rebuilding tissue tolerance.
               </p>
             </div>
 

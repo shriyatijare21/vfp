@@ -81,10 +81,10 @@ export function ServicesGrid() {
             Clinical Offerings
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-dark leading-tight">
-            Specialized Care for Every Condition
+            Personalized Care for Musculoskeletal Health
           </h2>
           <p className="mt-3 text-sm sm:text-base text-brand-muted leading-relaxed">
-            From acute disc strain to sports injury rehab, every treatment is tailored to your physical assessment. Explore our core clinical specializations.
+            From acute spinal strains to athletic recovery, each treatment plan is guided by an individual physical assessment and evidence-informed protocols. Explore our clinical focus areas below.
           </p>
         </div>
 

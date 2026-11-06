@@ -40,7 +40,7 @@ export function ResearchSpotlight() {
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Button href="/research" variant="primary" size="md">
-                  Explore Research Papers
+                  Explore Research &amp; Science
                   <ArrowRight className="w-4 h-4 ml-1.5" />
                 </Button>
 
@@ -62,7 +62,7 @@ export function ResearchSpotlight() {
                 <div className="flex items-center justify-between pb-3 border-b border-[#F0E6D6] text-xs">
                   <span className="font-semibold text-brand-forest uppercase tracking-wider flex items-center gap-1.5">
                     <FileCheck className="w-4 h-4 text-brand-gold" />
-                    Verified Investigation
+                    Academic Research Focus
                   </span>
                   <span className="text-[10px] text-brand-muted font-medium">
                     Garden City University
@@ -70,7 +70,7 @@ export function ResearchSpotlight() {
                 </div>
 
                 <h3 className="font-serif text-lg font-bold text-brand-dark leading-snug">
-                  Therapeutic Applications &amp; Efficacy of Dry Needling in Tendinopathy Management
+                  Physiological Mechanisms of Dry Needling in Musculoskeletal Tendinopathies
                 </h3>
 
                 <p className="text-xs text-brand-muted leading-relaxed">
@@ -89,7 +89,7 @@ export function ResearchSpotlight() {
                 </div>
 
                 <div className="pt-2 text-[11px] text-brand-muted/80 italic">
-                  Author: Vaibhav Ashok Farande (PT) &bull; Verified Research Scholar
+                  Investigator: Vaibhav Ashok Farande (PT) &bull; Postgraduate Scholar, School of Health Sciences
                 </div>
               </div>
             </div>

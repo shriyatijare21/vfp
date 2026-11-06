@@ -3,50 +3,49 @@ export interface ResearchItem {
   title: string;
   author: string;
   affiliation: string;
-  category: "Academic Publication / Thesis" | "Clinical Research" | "Systematic Literature Review";
+  category: "Clinical Investigation Focus" | "Biomechanical Literature Inquiry" | "Evidence-Based Rehabilitation";
   summary: string;
   keyInsights: string[];
   clinicalApplication: string;
   researchGateUrl: string;
-  status: "Verified Research Profile" | "Awaiting DOI Publication Details";
+  status: "Academic Research Profile";
 }
 
 export const researchData: ResearchItem[] = [
   {
     id: "dry-needling-tendinopathy",
-    title: "Therapeutic Applications & Efficacy of Dry Needling in Tendinopathy Management",
+    title: "Physiological Mechanisms of Dry Needling in Musculoskeletal Tendinopathies",
     author: "Vaibhav Ashok Farande (PT)",
-    affiliation: "School of Health Sciences, Garden City University",
-    category: "Clinical Research",
+    affiliation: "School of Health Sciences, Garden City University (Postgraduate Scholar)",
+    category: "Clinical Investigation Focus",
     summary:
-      "Explores the physiological and biomechanical outcomes of dry needling interventions on chronic tendinopathies, examining trigger point deactivation, micro-circulatory improvements, and subjective pain modulation.",
+      "Academic inquiry into how targeted trigger point dry needling influences local micro-circulation, modulates neurophysiological pain feedback loops, and aids tissue remodeling when paired with progressive eccentric loading exercises.",
     keyInsights: [
-      "Dry needling stimulates localized neuromuscular reset, interrupting pain-spasm-pain reflex loops.",
-      "Mechanical stimulation assists in triggering local inflammatory mediators necessary for cellular tendon repair.",
-      "Optimal results are observed when dry needling is combined with progressive eccentric mechanical loading.",
+      "Examines how trigger point deactivation alters local sensory nerve sensitivity and muscle guarding.",
+      "Studies the role of fine needle stimulation in triggering localized reparative circulatory responses.",
+      "Investigates the synergistic benefits when needling interventions are paired with active exercise protocols.",
     ],
     clinicalApplication:
-      "Directly informs our in-clinic approach to stubborn chronic conditions like Achilles tendinopathy, lateral epicondylalgia (tennis elbow), and patellar tendon pain.",
+      "Directly informs our in-clinic care for stubborn complaints such as Achilles tendon discomfort, lateral elbow pain (tennis elbow), and patellar tendon strain, ensuring needling is used to facilitate active rehabilitation rather than as an isolated passive treatment.",
     researchGateUrl: "https://www.researchgate.net/profile/Vaibhav-Farande",
-    status: "Verified Research Profile",
+    status: "Academic Research Profile",
   },
   {
     id: "evidence-based-physiotherapy",
-    title: "Translating Musculoskeletal Research into Daily Outpatient Physiotherapy Practice",
-    author: "Dr. Vaibhav Ashok Farande",
+    title: "Evidence-Informed Conservative Care Pathways for Mechanical Spinal Disorders",
+    author: "Dr. Vaibhav Ashok Farande (PT)",
     affiliation: "Farande Physiotherapy Clinic / Garden City University",
-    category: "Academic Publication / Thesis",
+    category: "Evidence-Based Rehabilitation",
     summary:
-      "A systematic clinical perspective highlighting how contemporary biomechanical findings and high-level clinical trials guide patient assessments, conservative spine management, and return-to-activity timelines.",
+      "Reviewing current clinical trial literature and biomechanical evidence to translate contemporary spine science into practical, unhurried outpatient physiotherapy in Amravati.",
     keyInsights: [
-      "Patient education and active movement therapies demonstrate superior long-term outcomes over passive modalities alone.",
-      "Accurate biomechanical subgrouping helps identify whether patients benefit more from mobilization, stabilization, or directional preference exercises.",
-      "Promoting patient self-efficacy significantly reduces recurrent episodes of lumbar strain.",
+      "Clinical evidence consistently demonstrates that active movement therapies provide superior long-term outcomes compared to passive modalities alone.",
+      "Individualized directional preference screening helps guide mechanical unloading for disc-related discomfort.",
+      "Patient education and movement confidence play a central role in reducing the recurrence of mechanical back strain.",
     ],
     clinicalApplication:
-      "Forms the foundation of our transparent patient journey, where every exercise is explained with evidence-based rationale.",
+      "Underpins our consultation process, where patients receive an evidence-informed explanation of their condition and a personalized recovery plan rather than generic, open-ended passive machine treatments.",
     researchGateUrl: "https://www.researchgate.net/profile/Vaibhav-Farande",
-    status: "Verified Research Profile",
+    status: "Academic Research Profile",
   },
 ];
-

@@ -75,7 +75,7 @@ export function ClinicIntro() {
                 </h3>
               </div>
               <p className="text-xs text-brand-muted leading-relaxed pl-12">
-                We apply published clinical protocols in dry needling and biomechanics from Garden City University research, ensuring every movement has therapeutic merit.
+                We integrate contemporary clinical research in dry needling and biomechanics, drawing on Dr. Farande&apos;s academic scholarship at Garden City University to ensure every technique has sound therapeutic rationale.
               </p>
             </div>
 

@@ -32,7 +32,7 @@ export function AppointmentCta() {
           </h2>
 
           <p className="text-base sm:text-lg text-brand-cream/80 max-w-2xl mx-auto leading-relaxed font-light">
-            Take the first step toward lasting mobility and pain relief. Connect directly on WhatsApp with your symptoms and let us arrange a dedicated appointment time in Amravati.
+            Take the first step toward better movement and physical comfort. Connect directly on WhatsApp to share your symptoms and arrange a dedicated consultation time in Amravati.
           </p>
 
           {/* Action Buttons */}
