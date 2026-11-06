@@ -37,11 +37,23 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 
   return {
-    title: `${service.title} | Farande Physiotherapy Clinic`,
-    description: service.shortDescription,
+    title: `${service.title} in Amravati | Farande Physiotherapy Clinic`,
+    description: `${service.shortDescription} Clinical evaluation and treatment by Dr. Vaibhav Ashok Farande (PT) at Maltekdi, Amravati.`,
+    alternates: {
+      canonical: `https://farandephysio.in/services/${service.slug}`,
+    },
     openGraph: {
-      title: `${service.title} in Amravati | Farande Physiotherapy`,
+      title: `${service.title} | Farande Physiotherapy Clinic Amravati`,
       description: service.shortDescription,
+      url: `https://farandephysio.in/services/${service.slug}`,
+      images: [
+        {
+          url: "/images/hero/clinic-og.svg",
+          width: 1200,
+          height: 630,
+          alt: `${service.title} - Farande Physiotherapy Clinic`,
+        },
+      ],
     },
   };
 }

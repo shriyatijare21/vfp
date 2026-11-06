@@ -37,17 +37,22 @@ export const metadata: Metadata = {
     "Farande Physiotherapy Clinic in Amravati, Maharashtra. Led by Dr. Vaibhav Ashok Farande (PT), providing evidence-based care for back pain, sports injuries, dry needling, neuro rehab, and posture correction.",
   keywords: [
     "Physiotherapy in Amravati",
+    "Physiotherapist in Amravati",
     "Best Physiotherapist Amravati",
     "Dr Vaibhav Farande",
     "Farande Physiotherapy Clinic",
     "Back Pain Relief Amravati",
     "Dry Needling Amravati",
-    "Sports Injury Rehabilitation",
+    "Sports Injury Rehabilitation Amravati",
     "Neuro Physiotherapy Amravati",
     "Maltekdi Physiotherapy",
+    "Sabnis Plot Physiotherapy Clinic",
   ],
   authors: [{ name: "Dr. Vaibhav Ashok Farande" }],
   creator: "Farande Physiotherapy Clinic",
+  alternates: {
+    canonical: "https://farandephysio.in",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -55,13 +60,13 @@ export const metadata: Metadata = {
     siteName: clinicInfo.name,
     title: `${clinicInfo.name} — ${clinicInfo.tagline}`,
     description:
-      "Evidence-informed physical therapy, pain relief, and athletic rehabilitation in Amravati, Maharashtra.",
+      "Evidence-informed physical therapy, pain relief, and athletic rehabilitation in Amravati, Maharashtra. Led by Dr. Vaibhav Ashok Farande (PT).",
     images: [
       {
-        url: "/images/hero/clinic-og.jpg",
+        url: "/images/hero/clinic-og.svg",
         width: 1200,
         height: 630,
-        alt: clinicInfo.name,
+        alt: `${clinicInfo.name} - Amravati, Maharashtra`,
       },
     ],
   },
@@ -69,10 +74,18 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: clinicInfo.name,
     description: clinicInfo.tagline,
+    images: ["/images/hero/clinic-og.svg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -84,9 +97,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${plusJakarta.variable}`}>
       <body className="min-h-screen flex flex-col bg-brand-ivory text-brand-charcoal font-sans antialiased selection:bg-brand-forest selection:text-brand-gold-light">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-forest focus:text-brand-ivory focus:ring-2 focus:ring-brand-gold focus:rounded-md focus:shadow-xl text-xs font-semibold"
+        >
+          Skip to main content
+        </a>
         <SchemaJsonLd />
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main id="main-content" className="flex-grow">
+          {children}
+        </main>
         <Footer />
         <WhatsAppFloat />
       </body>

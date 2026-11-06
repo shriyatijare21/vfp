@@ -21,13 +21,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Dr. Vaibhav Farande & Our Clinic",
+  title: "About Dr. Vaibhav Farande & Our Clinic | Amravati",
   description:
     "Learn about Dr. Vaibhav Ashok Farande (PT), BPT, postgraduate researcher at Garden City University, and the evidence-informed care philosophy at Farande Physiotherapy Clinic in Amravati.",
+  alternates: {
+    canonical: "https://farandephysio.in/about",
+  },
   openGraph: {
     title: "About Farande Physiotherapy Clinic | Dr. Vaibhav Farande (PT)",
     description:
       "Compassionate, unhurried, evidence-informed physical therapy in Amravati, Maharashtra.",
+    url: "https://farandephysio.in/about",
   },
 };
 

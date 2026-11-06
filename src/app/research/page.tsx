@@ -21,13 +21,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Academic Research & Evidence-Based Practice",
+  title: "Academic Research & Evidence-Based Practice | Amravati",
   description:
     "Explore the academic research and evidence-informed methodology of Dr. Vaibhav Ashok Farande (PT) and Farande Physiotherapy Clinic in Amravati.",
+  alternates: {
+    canonical: "https://farandephysio.in/research",
+  },
   openGraph: {
     title: "Research & Evidence-Based Care | Farande Physiotherapy Clinic",
     description:
       "Investigating dry needling in tendinopathies, musculoskeletal loading, and evidence-informed physical therapy.",
+    url: "https://farandephysio.in/research",
   },
 };
 

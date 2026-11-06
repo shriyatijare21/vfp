@@ -13,13 +13,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact & Appointment Enquiry",
+  title: "Contact & Appointment Enquiry | Farande Physiotherapy Amravati",
   description:
     "Contact Farande Physiotherapy Clinic in Amravati. Book an appointment consultation via WhatsApp or call +91 70300 89050. Located in Maltekdi near Kali Mata Temple.",
+  alternates: {
+    canonical: "https://farandephysio.in/contact",
+  },
   openGraph: {
     title: "Contact Farande Physiotherapy Clinic | Amravati",
     description:
       "Direct WhatsApp appointment booking, phone helpline, clinic address, and Google Maps directions.",
+    url: "https://farandephysio.in/contact",
   },
 };
 

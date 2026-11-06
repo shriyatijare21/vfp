@@ -22,13 +22,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Facilities & Equipment | Farande Physiotherapy Clinic",
+  title: "Facilities & Equipment | Farande Physiotherapy Clinic Amravati",
   description:
     "Explore the clinical environment, hygiene standards, and therapeutic equipment at Farande Physiotherapy Clinic in Amravati.",
+  alternates: {
+    canonical: "https://farandephysio.in/facilities",
+  },
   openGraph: {
-    title: "Clinic Facilities & Hygiene | Farande Physiotherapy Clinic",
+    title: "Clinic Facilities & Hygiene | Farande Physiotherapy Clinic Amravati",
     description:
       "Private treatment cubicles, sterile single-use dry needling, and electrotherapy equipment in Amravati.",
+    url: "https://farandephysio.in/facilities",
   },
 };
 

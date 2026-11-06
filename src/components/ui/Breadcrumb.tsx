@@ -50,3 +50,4 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
     </div>
   );
 }
+

@@ -36,6 +36,17 @@ export function Navbar() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
+  // Handle escape key to close mobile menu
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
+
   return (
     <header
       className={cn(
@@ -78,7 +89,11 @@ export function Navbar() {
       {/* Main Navigation Bar */}
       <Container className="flex items-center justify-between h-18 sm:h-20">
         {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+        <Link
+          href="/"
+          aria-label="Farande Physiotherapy Clinic - Return to homepage"
+          className="flex items-center gap-2.5 sm:gap-3 group shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded-xl p-1"
+        >
           <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-brand-forest text-brand-gold flex items-center justify-center border border-brand-gold/40 shadow-sm transition-transform duration-300 group-hover:scale-105 shrink-0">
             <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
           </div>
@@ -93,7 +108,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+        <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/"
@@ -104,7 +119,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-xs xl:text-sm font-medium transition-colors duration-200 py-1 border-b-2 tracking-wide",
+                  "text-xs xl:text-sm font-medium transition-colors duration-200 py-1 border-b-2 tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded-sm",
                   isActive
                     ? "text-brand-forest border-brand-gold font-semibold"
                     : "text-brand-charcoal/80 border-transparent hover:text-brand-forest hover:border-brand-gold/50"
@@ -124,6 +139,7 @@ export function Navbar() {
             variant="whatsapp"
             size="sm"
             className="hidden xl:inline-flex"
+            aria-label="Enquire on WhatsApp (+91 70300 89050)"
           >
             <MessageSquare className="w-4 h-4 mr-1.5 fill-white" />
             WhatsApp
@@ -135,6 +151,7 @@ export function Navbar() {
             variant="gold"
             size="sm"
             className="shadow-sm"
+            aria-label="Enquire for clinic appointment on WhatsApp"
           >
             Enquire Appointment
           </Button>
@@ -146,17 +163,18 @@ export function Navbar() {
             href={clinicInfo.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Enquire on WhatsApp"
-            className="sm:hidden p-2 rounded-lg bg-[#25D366] text-white hover:bg-[#20ba59] transition-colors"
+            aria-label="Enquire on WhatsApp (+91 70300 89050)"
+            className="sm:hidden p-2 rounded-lg bg-[#25D366] text-white hover:bg-[#20ba59] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-forest"
           >
             <MessageSquare className="w-4 h-4 fill-white" />
           </a>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-brand-forest hover:bg-brand-cream/60 transition-colors focus:outline-none"
-            aria-label="Toggle Navigation Menu"
+            className="p-2 rounded-lg text-brand-forest hover:bg-brand-cream/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -169,7 +187,11 @@ export function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-brand-ivory border-b border-[#E7DDCA] px-4 pt-3 pb-6 shadow-xl animate-in slide-in-from-top-2 duration-200">
+        <nav
+          id="mobile-navigation"
+          aria-label="Mobile Navigation"
+          className="lg:hidden bg-brand-ivory border-b border-[#E7DDCA] px-4 pt-3 pb-6 shadow-xl animate-in slide-in-from-top-2 duration-200"
+        >
           <div className="flex flex-col space-y-2">
             {navLinks.map((link) => {
               const isActive =
@@ -212,7 +234,7 @@ export function Navbar() {
               </Button>
             </div>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

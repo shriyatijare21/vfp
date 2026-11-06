@@ -21,21 +21,21 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+    "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
 
   const variantStyles = {
     primary:
-      "bg-brand-forest text-brand-white hover:bg-brand-dark shadow-sm hover:shadow-luxury focus:ring-brand-forest",
+      "bg-brand-forest text-brand-white hover:bg-brand-dark shadow-sm hover:shadow-luxury focus-visible:ring-brand-forest",
     secondary:
-      "bg-brand-cream text-brand-forest hover:bg-[#e4dcce] border border-[#d8cfbe] focus:ring-brand-forest",
+      "bg-brand-cream text-brand-forest hover:bg-[#e4dcce] border border-[#d8cfbe] focus-visible:ring-brand-forest",
     gold:
-      "bg-brand-gold text-brand-dark hover:bg-[#b8954e] shadow-gold font-semibold focus:ring-brand-gold",
+      "bg-brand-gold text-brand-dark hover:bg-[#b8954e] shadow-gold font-semibold focus-visible:ring-brand-gold",
     outline:
-      "bg-transparent text-brand-forest border border-brand-forest/30 hover:border-brand-forest hover:bg-brand-forest/5 focus:ring-brand-forest",
+      "bg-transparent text-brand-forest border border-brand-forest/30 hover:border-brand-forest hover:bg-brand-forest/5 focus-visible:ring-brand-forest",
     ghost:
-      "bg-transparent text-brand-forest hover:bg-brand-cream/60 focus:ring-brand-forest",
+      "bg-transparent text-brand-forest hover:bg-brand-cream/60 focus-visible:ring-brand-forest",
     whatsapp:
-      "bg-[#25D366] text-white hover:bg-[#20ba59] shadow-md hover:shadow-lg focus:ring-[#25D366]",
+      "bg-[#25D366] text-white hover:bg-[#20ba59] shadow-md hover:shadow-lg focus-visible:ring-[#25D366]",
   };
 
   const sizeStyles = {

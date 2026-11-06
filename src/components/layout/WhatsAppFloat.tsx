@@ -18,7 +18,7 @@ export function WhatsAppFloat() {
           </div>
           <button
             onClick={() => setIsDismissed(true)}
-            className="text-brand-muted/60 hover:text-brand-dark p-0.5 ml-1"
+            className="text-brand-muted/60 hover:text-brand-dark p-0.5 ml-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
             aria-label="Dismiss tooltip"
           >
             <X className="w-3.5 h-3.5" />
@@ -31,8 +31,8 @@ export function WhatsAppFloat() {
         href={clinicInfo.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Enquire on WhatsApp with Farande Physiotherapy Clinic"
-        className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl hover:bg-[#20ba59] hover:scale-105 active:scale-95 transition-all duration-300 relative focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
+        aria-label="Enquire on WhatsApp with Farande Physiotherapy Clinic (+91 70300 89050)"
+        className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl hover:bg-[#20ba59] hover:scale-105 active:scale-95 transition-all duration-300 relative focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50"
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25 group-hover:opacity-0" />
         <MessageSquare className="w-7 h-7 fill-white stroke-none relative z-10" />
