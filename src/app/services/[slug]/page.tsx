@@ -6,6 +6,7 @@ import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import {
   CheckCircle2,
   Clock,
@@ -64,35 +65,21 @@ export default function ServiceDetailPage({ params }: Props) {
   )}`;
 
   return (
-    <div className="py-10 lg:py-16">
+    <div>
       {/* Breadcrumb Navigation */}
-      <div className="pb-8">
-        <Container>
-          <nav className="flex items-center gap-2 text-xs text-brand-muted">
-            <Link href="/" className="hover:text-brand-forest transition-colors">
-              Home
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <Link
-              href="/services"
-              className="hover:text-brand-forest transition-colors"
-            >
-              Services
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-brand-charcoal font-medium truncate">
-              {service.title}
-            </span>
-          </nav>
-        </Container>
-      </div>
+      <Breadcrumb
+        items={[
+          { label: "Clinical Services", href: "/services" },
+          { label: service.title },
+        ]}
+      />
 
       {/* Service Hero Header */}
-      <section className="pb-14 border-b border-[#E7DDCA]">
+      <section className="py-14 sm:py-18 bg-gradient-to-b from-[#102B24] via-[#14342B] to-[#173D32] text-brand-ivory border-b border-brand-gold/30">
         <Container>
           <div className="max-w-4xl space-y-4">
             <div className="flex flex-wrap items-center gap-3">
-              <Badge variant="forest">{service.category}</Badge>
+              <Badge variant="gold">{service.category}</Badge>
               {service.requiresConfirmation && (
                 <Badge variant="pending">
                   <Info className="w-3 h-3 mr-1" />
@@ -101,11 +88,11 @@ export default function ServiceDetailPage({ params }: Props) {
               )}
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-dark leading-[1.15]">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white leading-[1.15]">
               {service.title}
             </h1>
 
-            <p className="text-base sm:text-xl text-brand-muted leading-relaxed font-light">
+            <p className="text-base sm:text-xl text-brand-cream/80 leading-relaxed font-light">
               {service.shortDescription}
             </p>
           </div>
@@ -113,7 +100,7 @@ export default function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* Main Content & Sidebar Grid */}
-      <section className="py-14">
+      <section className="py-14 sm:py-20 bg-[#FBF8F2]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column: Full Clinical Narrative */}
@@ -132,13 +119,13 @@ export default function ServiceDetailPage({ params }: Props) {
               </div>
 
               {/* Conditions Treated */}
-              <div className="bg-brand-white rounded-2xl p-7 sm:p-9 border border-[#EADBCC] shadow-sm space-y-6">
+              <div className="bg-brand-white rounded-2xl p-7 sm:p-9 border border-[#DECDB5] shadow-sm space-y-6">
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-1">
                     Indications
                   </span>
                   <h3 className="font-serif text-2xl font-bold text-brand-dark">
-                    Conditions & Symptoms Addressed
+                    Conditions &amp; Symptoms Addressed
                   </h3>
                   <p className="text-xs sm:text-sm text-brand-muted mt-1">
                     This therapeutic approach is commonly indicated for individuals experiencing:
@@ -166,7 +153,7 @@ export default function ServiceDetailPage({ params }: Props) {
                   Expected Outcomes
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-brand-dark">
-                  Therapeutic Benefits & Goals
+                  Therapeutic Benefits &amp; Goals
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {service.keyBenefits.map((benefit, idx) => (
@@ -259,7 +246,7 @@ export default function ServiceDetailPage({ params }: Props) {
                 <div className="pt-4 border-t border-[#EFE5D5] space-y-2.5 text-xs text-brand-charcoal">
                   <div className="flex items-start gap-2">
                     <Clock className="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5" />
-                    <span>Mon–Sat: 9 AM–2 PM & 2:30 PM–8 PM</span>
+                    <span>Mon–Sat: 9 AM–2 PM &amp; 2:30 PM–8 PM</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5" />

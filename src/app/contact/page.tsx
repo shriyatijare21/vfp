@@ -2,49 +2,64 @@ import type { Metadata } from "next";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import {
   MapPin,
   Phone,
   Clock,
   Navigation,
   ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact & Appointment Enquiry",
   description:
     "Contact Farande Physiotherapy Clinic in Amravati. Book an appointment consultation via WhatsApp or call +91 70300 89050. Located in Maltekdi near Kali Mata Temple.",
+  openGraph: {
+    title: "Contact Farande Physiotherapy Clinic | Amravati",
+    description:
+      "Direct WhatsApp appointment booking, phone helpline, clinic address, and Google Maps directions.",
+  },
 };
 
 export default function ContactPage() {
   return (
-    <div className="py-12 lg:py-20">
-      {/* Header */}
-      <section className="pb-16 border-b border-[#E7DDCA]">
-        <Container>
-          <div className="max-w-3xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-3">
-              Contact & Directions
-            </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark font-normal leading-[1.15]">
+    <div>
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb items={[{ label: "Contact & Location" }]} />
+
+      {/* Hero Header */}
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#102B24] via-[#14342B] to-[#173D32] text-brand-ivory border-b border-brand-gold/30 relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
+
+        <Container className="relative z-10">
+          <div className="max-w-3xl space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold-light text-xs font-semibold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+              Direct Communication
+            </div>
+
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal leading-[1.14]">
               We Are Here to Help You Move Freely Again.
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-brand-muted leading-relaxed">
-              Enquire about appointment slots, ask a clinical question, or visit our clinic in Amravati. We prioritize quick, personal responses directly on WhatsApp.
+
+            <p className="text-base sm:text-xl text-brand-cream/80 leading-relaxed font-light pt-2">
+              Enquire about appointment slots, ask a clinical question, or visit our clinic in Amravati. We prioritize quick, personal responses directly on WhatsApp with Dr. Vaibhav Farande.
             </p>
           </div>
         </Container>
       </section>
 
       {/* Main Grid: Details + Interactive WhatsApp Form */}
-      <section className="py-16">
+      <section className="py-16 lg:py-24 bg-[#FBF8F2]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column: Clinic Contact Details */}
             <div className="lg:col-span-5 space-y-8">
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-forest block">
-                  Clinic Information
+                  Visiting &amp; Helpline
                 </span>
                 <h2 className="font-serif text-3xl font-bold text-brand-dark">
                   Farande Physiotherapy Clinic
@@ -57,7 +72,7 @@ export default function ContactPage() {
               {/* Contact Cards */}
               <div className="space-y-4">
                 {/* Phone & WhatsApp */}
-                <div className="p-6 rounded-2xl bg-brand-white border border-[#EADBCC] shadow-sm space-y-3">
+                <div className="p-6 rounded-2xl bg-brand-white border border-[#DECDB5] shadow-sm space-y-2.5">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-brand-forest/10 flex items-center justify-center text-brand-forest">
                       <Phone className="w-5 h-5 text-brand-gold" />
@@ -74,18 +89,18 @@ export default function ContactPage() {
                       </a>
                     </div>
                   </div>
-                  <p className="text-xs text-brand-muted">
+                  <p className="text-xs text-brand-muted pl-13">
                     Our direct WhatsApp line for consultations and appointment queries.
                   </p>
                 </div>
 
                 {/* Address */}
-                <div className="p-6 rounded-2xl bg-brand-white border border-[#EADBCC] shadow-sm space-y-3">
+                <div className="p-6 rounded-2xl bg-brand-white border border-[#DECDB5] shadow-sm space-y-2.5">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-full bg-brand-forest/10 flex items-center justify-center text-brand-forest shrink-0 mt-0.5">
                       <MapPin className="w-5 h-5 text-brand-gold" />
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <p className="text-xs text-brand-muted uppercase font-semibold">
                         Clinic Address
                       </p>
@@ -95,7 +110,7 @@ export default function ContactPage() {
                       <p className="text-xs text-brand-muted">
                         {clinicInfo.address.landmark}, {clinicInfo.address.area}
                       </p>
-                      <p className="text-xs text-brand-muted">
+                      <p className="text-xs text-brand-muted font-medium">
                         {clinicInfo.address.city}, {clinicInfo.address.state} – {clinicInfo.address.postalCode}
                       </p>
                     </div>
@@ -103,25 +118,23 @@ export default function ContactPage() {
                 </div>
 
                 {/* Timings */}
-                <div className="p-6 rounded-2xl bg-brand-white border border-[#EADBCC] shadow-sm space-y-3">
+                <div className="p-6 rounded-2xl bg-brand-white border border-[#DECDB5] shadow-sm space-y-2.5">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-full bg-brand-forest/10 flex items-center justify-center text-brand-forest shrink-0 mt-0.5">
                       <Clock className="w-5 h-5 text-brand-gold" />
                     </div>
-                    <div className="space-y-1">
-                      <p className="text-xs text-brand-muted uppercase font-semibold">
-                        Consultation Timings
-                      </p>
-                      <p className="text-sm font-semibold text-brand-charcoal">
+                    <div className="space-y-0.5 text-xs sm:text-sm text-brand-charcoal">
+                      <p className="font-semibold">Consultation Timings</p>
+                      <p className="text-brand-muted text-xs">
                         Monday – Saturday
                       </p>
-                      <p className="text-xs text-brand-muted">
+                      <p className="text-brand-muted text-xs">
                         Morning: 9:00 AM – 2:00 PM
                       </p>
-                      <p className="text-xs text-brand-muted">
+                      <p className="text-brand-muted text-xs">
                         Evening: 2:30 PM – 8:00 PM
                       </p>
-                      <p className="text-xs text-amber-800 font-semibold pt-1">
+                      <p className="text-amber-800 font-semibold text-xs pt-1">
                         Sunday: Closed
                       </p>
                     </div>
@@ -129,14 +142,14 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Safety / Verification Note */}
+              {/* Safety & Booking Note */}
               <div className="p-5 rounded-2xl bg-brand-forest text-brand-ivory border border-brand-gold/30 text-xs space-y-1.5">
                 <div className="flex items-center gap-2 font-semibold text-brand-gold">
                   <ShieldCheck className="w-4 h-4" />
                   Appointment Process Transparency
                 </div>
                 <p className="text-brand-cream/80 leading-relaxed font-light">
-                  Enquiries connect directly to Dr. Vaibhav Farande via WhatsApp. We will discuss your symptoms and coordinate a mutually confirmed time slot before your visit.
+                  Enquiries connect directly to Dr. Vaibhav Farande via WhatsApp. We will discuss your symptoms and coordinate a mutually confirmed time slot before your visit to ensure zero waiting time.
                 </p>
               </div>
             </div>
@@ -150,14 +163,14 @@ export default function ContactPage() {
       </section>
 
       {/* Google Maps Embed Section */}
-      <section className="py-16 bg-[#F3EDE2] border-t border-[#E7DDCA]">
+      <section className="py-16 bg-[#F4EEE3] border-t border-[#E3D6C1]">
         <Container>
-          <div className="max-w-3xl mb-8">
+          <div className="max-w-3xl mb-8 text-center sm:text-left">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-2">
               Find Our Clinic
             </span>
             <h2 className="font-serif text-3xl font-bold text-brand-dark">
-              Google Maps Location & Driving Directions
+              Google Maps Location &amp; Driving Directions
             </h2>
             <p className="text-xs sm:text-sm text-brand-muted mt-1">
               Convenient access from all parts of Amravati. Located near the prominent landmark of Kali Mata Temple in Maltekdi.

@@ -25,3 +25,4 @@ This directory is organized into dedicated subfolders for easy management and re
 * **Purpose:** Verified equipment present at the clinic (electrotherapy, mobilization tables, resistance bands).
 
 > **Note on Compliance:** All placeholder graphics currently rendered in the website use bespoke brand-themed vector illustrations to ensure no artificial/unverified imagery is misrepresented as the actual clinic.
+
