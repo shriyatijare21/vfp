@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { facilitiesData } from "@/data/equipment";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
@@ -15,8 +14,6 @@ import {
   MessageSquare,
   Sparkles,
   MapPin,
-  Clock,
-  ArrowRight,
   AlertCircle,
   Building,
 } from "lucide-react";

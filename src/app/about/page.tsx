@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -14,10 +13,7 @@ import {
   MessageSquare,
   Sparkles,
   MapPin,
-  Clock,
   ArrowRight,
-  Stethoscope,
-  Activity,
 } from "lucide-react";
 
 export const metadata: Metadata = {

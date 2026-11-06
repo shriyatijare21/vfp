@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { researchData } from "@/data/research";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
@@ -13,11 +12,7 @@ import {
   CheckCircle2,
   Microscope,
   BookOpen,
-  Sparkles,
-  ShieldCheck,
   MessageSquare,
-  FileText,
-  ArrowRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {

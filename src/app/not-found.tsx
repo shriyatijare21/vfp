@@ -1,9 +1,8 @@
 import React from "react";
-import Link from "next/link";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Home, ArrowLeft, MessageSquare, Phone, HeartPulse } from "lucide-react";
+import { Home, ArrowLeft, MessageSquare, HeartPulse } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -72,3 +71,4 @@ export default function NotFound() {
     </div>
   );
 }
+
