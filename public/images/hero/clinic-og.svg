@@ -1,0 +1,45 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#102B24"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)" opacity="0.6"/>
+  
+  <!-- Subtle decorative rings -->
+  <circle cx="1050" cy="180" r="320" stroke="#C6A45C" stroke-opacity="0.15" stroke-width="2"/>
+  <circle cx="1050" cy="180" r="440" stroke="#C6A45C" stroke-opacity="0.08" stroke-width="1.5"/>
+  <circle cx="150" cy="550" r="280" stroke="#C6A45C" stroke-opacity="0.1" stroke-width="1.5"/>
+
+  <!-- Brand Emblem -->
+  <g transform="translate(100, 100)">
+    <rect width="70" height="70" rx="35" fill="#173D32" stroke="#C6A45C" stroke-width="2"/>
+    <path d="M35 24C31 20 25 20 21 24C17 28 17 34 21 38L35 52L49 38C53 34 53 28 49 24C45 20 39 20 35 24Z" fill="none" stroke="#C6A45C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M25 35H32L35 30L38 40L41 35H46" fill="none" stroke="#E4D2A5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Tagline Badge -->
+  <rect x="100" y="200" width="340" height="36" rx="18" fill="#173D32" stroke="#C6A45C" stroke-width="1"/>
+  <text x="120" y="223" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="13" font-weight="600" letter-spacing="2">THE CARING HANDS YOU DESERVE</text>
+
+  <!-- Title -->
+  <text x="100" y="300" fill="#FFFFFF" font-family="Georgia, serif" font-size="54" font-weight="bold">Farande Physiotherapy Clinic</text>
+  <text x="100" y="360" fill="#C6A45C" font-family="Georgia, serif" font-size="34" font-style="italic">Dr. Vaibhav Ashok Farande (PT)</text>
+  <text x="590" y="360" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="22" font-weight="500">| BPT, Musculoskeletal & Neuro Rehab</text>
+
+  <!-- Subtitle -->
+  <text x="100" y="425" fill="#EFE8DA" font-family="system-ui, sans-serif" font-size="22" opacity="0.85">Evidence-informed physical therapy, dry needling, spine care & sports rehabilitation.</text>
+
+  <!-- Footer Info Line -->
+  <line x1="100" y1="480" x2="1100" y2="480" stroke="#C6A45C" stroke-opacity="0.3" stroke-width="1"/>
+  
+  <text x="100" y="530" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="18" font-weight="600">Amravati, Maharashtra</text>
+  <text x="100" y="555" fill="#EFE8DA" font-family="system-ui, sans-serif" font-size="14" opacity="0.7">Shop No. 3, Mahakali Enclave, Maltekdi, Near Kali Mata Temple</text>
+
+  <text x="850" y="530" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">+91 70300 89050</text>
+  <text x="850" y="555" fill="#25D366" font-family="system-ui, sans-serif" font-size="14" font-weight="600">WhatsApp Consultation Available</text>
+
+  <defs>
+    <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#173D32" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#102B24" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>

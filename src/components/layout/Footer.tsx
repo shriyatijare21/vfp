@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
 import {
@@ -13,42 +16,47 @@ import {
 } from "lucide-react";
 
 export function Footer() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   return (
     <footer className="bg-brand-dark text-brand-ivory border-t border-brand-forest/60">
-      {/* Top CTA Banner */}
-      <div className="border-b border-brand-forest/50 py-12 bg-gradient-to-b from-[#14352c] to-brand-dark">
-        <Container className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-2">
-              Ready to begin your recovery?
-            </span>
-            <h3 className="font-serif text-2xl sm:text-3xl text-brand-ivory">
-              Schedule your clinical consultation today.
-            </h3>
-            <p className="text-sm text-brand-cream/70 mt-1 max-w-xl">
-              Connect directly with Dr. Vaibhav Farande to discuss your symptoms and enquire about available appointment slots.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a
-              href={clinicInfo.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-gold text-brand-dark font-semibold text-sm hover:bg-[#b5934a] transition-all shadow-gold"
-            >
-              Enquire via WhatsApp
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-            <a
-              href={`tel:${clinicInfo.phone}`}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-forest/80 text-brand-ivory border border-brand-gold/30 font-medium text-sm hover:bg-brand-forest transition-all"
-            >
-              <Phone className="w-4 h-4 text-brand-gold" />
-              {clinicInfo.phoneDisplay}
-            </a>
-          </div>
-        </Container>
-      </div>
+      {/* Top CTA Banner: Shown on inner pages for conversion, hidden on homepage where AppointmentCta is featured */}
+      {!isHomePage && (
+        <div className="border-b border-brand-forest/50 py-12 bg-gradient-to-b from-[#14352c] to-brand-dark">
+          <Container className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-2">
+                Ready to begin your recovery?
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl text-brand-ivory">
+                Schedule your clinical consultation today.
+              </h3>
+              <p className="text-sm text-brand-cream/70 mt-1 max-w-xl">
+                Connect directly with Dr. Vaibhav Farande to discuss your symptoms and enquire about available appointment slots.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a
+                href={clinicInfo.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-gold text-brand-dark font-semibold text-sm hover:bg-[#b5934a] transition-all shadow-gold"
+              >
+                Enquire via WhatsApp
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+              <a
+                href={`tel:${clinicInfo.phone}`}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-forest/80 text-brand-ivory border border-brand-gold/30 font-medium text-sm hover:bg-brand-forest transition-all"
+              >
+                <Phone className="w-4 h-4 text-brand-gold" />
+                {clinicInfo.phoneDisplay}
+              </a>
+            </div>
+          </Container>
+        </div>
+      )}
 
       {/* Main Footer Content */}
       <div className="py-16">
@@ -76,7 +84,7 @@ export function Footer() {
             <div className="pt-2">
               <span className="inline-flex items-center gap-1.5 text-xs text-brand-gold-light bg-brand-forest/60 px-3 py-1.5 rounded-full border border-brand-gold/20">
                 <ShieldCheck className="w-3.5 h-3.5 text-brand-gold" />
-                Ethical & Evidence-Informed Practice
+                Ethical &amp; Evidence-Informed Practice
               </span>
             </div>
           </div>
@@ -104,17 +112,17 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/facilities" className="hover:text-brand-gold transition-colors">
-                  Facilities & Equipment
+                  Facilities &amp; Equipment
                 </Link>
               </li>
               <li>
                 <Link href="/research" className="hover:text-brand-gold transition-colors">
-                  Research & Science
+                  Research &amp; Science
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-brand-gold transition-colors">
-                  Contact & Location
+                  Contact &amp; Location
                 </Link>
               </li>
             </ul>
@@ -128,7 +136,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-brand-cream/70">
               <li>
                 <Link href="/services/back-pain-relief" className="hover:text-brand-gold transition-colors">
-                  Back Pain Relief & Spine Care
+                  Back Pain Relief &amp; Spine Care
                 </Link>
               </li>
               <li>
@@ -148,7 +156,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/services/posture-correction" className="hover:text-brand-gold transition-colors">
-                  Posture & Ergonomics
+                  Posture &amp; Ergonomics
                 </Link>
               </li>
               <li>

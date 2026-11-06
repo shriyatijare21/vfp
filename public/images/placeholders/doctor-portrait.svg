@@ -1,0 +1,44 @@
+<svg width="600" height="750" viewBox="0 0 600 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14342B"/>
+      <stop offset="50%" stop-color="#173D32"/>
+      <stop offset="100%" stop-color="#102B24"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="#C6A45C" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#173D32" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#C6A45C" stroke-opacity="0.08" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="750" rx="24" fill="url(#bgGrad)"/>
+  <rect width="600" height="750" rx="24" fill="url(#gridPattern)"/>
+  <rect width="600" height="750" rx="24" fill="url(#goldGlow)"/>
+
+  <!-- Gold Hairline Frame -->
+  <rect x="24" y="24" width="552" height="702" rx="16" stroke="#C6A45C" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- Silhouette Icon Group -->
+  <g transform="translate(180, 160)">
+    <!-- Doctor Head & Shoulders Silhouette -->
+    <circle cx="120" cy="110" r="70" fill="#1B473B" stroke="#C6A45C" stroke-width="2"/>
+    <path d="M40 310 C40 215, 80 195, 120 195 C160 195, 200 215, 200 310 Z" fill="#1B473B" stroke="#C6A45C" stroke-width="2"/>
+    
+    <!-- Stethoscope Accent -->
+    <path d="M95 240 C95 275, 145 275, 145 240 V205" fill="none" stroke="#E4D2A5" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="120" cy="278" r="9" fill="#C6A45C"/>
+  </g>
+
+  <!-- Central Badge -->
+  <g transform="translate(100, 500)">
+    <rect width="400" height="140" rx="16" fill="#102B24" fill-opacity="0.85" stroke="#C6A45C" stroke-width="1.5"/>
+    <text x="200" y="38" text-anchor="middle" fill="#C6A45C" font-family="system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="2">CLIENT PHOTOGRAPHY PLACEHOLDER</text>
+    <text x="200" y="70" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, serif" font-size="22" font-weight="bold">Dr. Vaibhav Ashok Farande (PT)</text>
+    <text x="200" y="98" text-anchor="middle" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="14" font-weight="500">BPT | Consultant Physiotherapist</text>
+    <text x="200" y="122" text-anchor="middle" fill="#716F66" font-family="system-ui, sans-serif" font-size="11">Replace with high-res portrait in /public/images/doctor/</text>
+  </g>
+</svg>

@@ -42,54 +42,58 @@ export function Navbar() {
         "sticky top-0 z-40 w-full transition-all duration-300",
         isScrolled
           ? "bg-brand-ivory/95 backdrop-blur-md shadow-sm border-b border-[#E7DDCA]"
-          : "bg-brand-ivory/80 backdrop-blur-sm border-b border-transparent"
+          : "bg-brand-ivory/85 backdrop-blur-sm border-b border-transparent"
       )}
     >
       {/* Top micro announcement bar */}
-      <div className="bg-brand-forest text-brand-ivory text-xs py-1.5 px-4">
+      <div className="bg-brand-forest text-brand-ivory text-xs py-1.5 px-3 sm:px-4">
         <Container className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="hidden sm:inline font-light tracking-wide">
+          <div className="flex items-center gap-2 truncate">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+            <span className="hidden sm:inline font-light tracking-wide truncate">
               {clinicInfo.tagline}
             </span>
-            <span className="sm:hidden font-light">Amravati, Maharashtra</span>
+            <span className="sm:hidden font-light text-[11px] truncate">
+              Amravati, Maharashtra &bull; Mon–Sat
+            </span>
           </div>
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex items-center gap-3 sm:gap-4 text-xs shrink-0">
             <a
               href={`tel:${clinicInfo.phone}`}
               className="flex items-center gap-1.5 text-brand-gold-light hover:text-white transition-colors"
             >
-              <Phone className="w-3.5 h-3.5" />
-              <span className="font-medium">{clinicInfo.phoneDisplay}</span>
+              <Phone className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+              <span className="font-medium text-[11px] sm:text-xs">
+                {clinicInfo.phoneDisplay}
+              </span>
             </a>
             <span className="text-white/30 hidden md:inline">|</span>
-            <span className="hidden md:inline text-white/70">
-              Mon–Sat: 9 AM–2 PM & 2:30 PM–8 PM
+            <span className="hidden md:inline text-white/70 text-[11px]">
+              9:00 AM – 2:00 PM &amp; 2:30 PM – 8:00 PM
             </span>
           </div>
         </Container>
       </div>
 
-      {/* Main Navigation */}
-      <Container className="flex items-center justify-between h-20">
+      {/* Main Navigation Bar */}
+      <Container className="flex items-center justify-between h-18 sm:h-20">
         {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-11 h-11 rounded-full bg-brand-forest text-brand-gold flex items-center justify-center border border-brand-gold/40 shadow-sm transition-transform duration-300 group-hover:scale-105">
-            <HeartPulse className="w-6 h-6 stroke-[1.8]" />
+        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-brand-forest text-brand-gold flex items-center justify-center border border-brand-gold/40 shadow-sm transition-transform duration-300 group-hover:scale-105 shrink-0">
+            <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
           </div>
           <div className="flex flex-col">
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-brand-forest leading-tight group-hover:text-brand-dark transition-colors">
+            <span className="font-serif text-lg sm:text-2xl font-bold tracking-tight text-brand-forest leading-none group-hover:text-brand-dark transition-colors">
               Farande
             </span>
-            <span className="text-[11px] font-sans tracking-[0.16em] uppercase text-brand-gold font-semibold">
+            <span className="text-[10px] sm:text-[11px] font-sans tracking-[0.14em] sm:tracking-[0.16em] uppercase text-brand-gold font-semibold mt-0.5">
               Physiotherapy Clinic
             </span>
           </div>
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/"
@@ -100,7 +104,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors duration-200 py-1 border-b-2",
+                  "text-xs xl:text-sm font-medium transition-colors duration-200 py-1 border-b-2 tracking-wide",
                   isActive
                     ? "text-brand-forest border-brand-gold font-semibold"
                     : "text-brand-charcoal/80 border-transparent hover:text-brand-forest hover:border-brand-gold/50"
@@ -113,7 +117,7 @@ export function Navbar() {
         </nav>
 
         {/* Action Buttons */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-2.5 sm:gap-3">
           <Button
             href={clinicInfo.whatsappUrl}
             isExternal
@@ -121,8 +125,8 @@ export function Navbar() {
             size="sm"
             className="hidden xl:inline-flex"
           >
-            <MessageSquare className="w-4 h-4 mr-1" />
-            WhatsApp Enquiry
+            <MessageSquare className="w-4 h-4 mr-1.5 fill-white" />
+            WhatsApp
           </Button>
 
           <Button
@@ -130,22 +134,23 @@ export function Navbar() {
             isExternal
             variant="gold"
             size="sm"
+            className="shadow-sm"
           >
             Enquire Appointment
           </Button>
         </div>
 
-        {/* Mobile menu toggle */}
-        <div className="flex items-center gap-2 lg:hidden">
-          <Button
+        {/* Mobile menu toggle & quick action */}
+        <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
+          <a
             href={clinicInfo.whatsappUrl}
-            isExternal
-            variant="whatsapp"
-            size="sm"
-            className="sm:hidden px-3 py-1.5 text-xs"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Enquire on WhatsApp"
+            className="sm:hidden p-2 rounded-lg bg-[#25D366] text-white hover:bg-[#20ba59] transition-colors"
           >
-            <MessageSquare className="w-3.5 h-3.5" />
-          </Button>
+            <MessageSquare className="w-4 h-4 fill-white" />
+          </a>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -165,7 +170,7 @@ export function Navbar() {
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-brand-ivory border-b border-[#E7DDCA] px-4 pt-3 pb-6 shadow-xl animate-in slide-in-from-top-2 duration-200">
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-2">
             {navLinks.map((link) => {
               const isActive =
                 link.href === "/"
@@ -176,7 +181,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "px-3 py-2.5 rounded-lg text-base font-medium transition-colors",
+                    "px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors",
                     isActive
                       ? "bg-brand-forest text-brand-white font-semibold"
                       : "text-brand-charcoal hover:bg-brand-cream/60"
@@ -191,16 +196,16 @@ export function Navbar() {
                 href={clinicInfo.whatsappUrl}
                 isExternal
                 variant="whatsapp"
-                className="w-full justify-center"
+                className="w-full justify-center py-3 text-xs"
               >
-                <MessageSquare className="w-4 h-4 mr-2" />
+                <MessageSquare className="w-4 h-4 mr-2 fill-white" />
                 Chat on WhatsApp (+91 70300 89050)
               </Button>
               <Button
                 href={`tel:${clinicInfo.phone}`}
                 isExternal
                 variant="outline"
-                className="w-full justify-center"
+                className="w-full justify-center py-3 text-xs"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Call Clinic Directly

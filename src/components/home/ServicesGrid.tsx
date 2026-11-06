@@ -1,9 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
-import { servicesData } from "@/data/services";
+import { servicesData, ServiceItem } from "@/data/services";
+import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import {
@@ -13,115 +14,229 @@ import {
   Brain,
   Sparkles,
   Layers,
+  Bandage,
+  Compass,
+  Dumbbell,
+  Zap,
+  Maximize2,
+  Radio,
+  Sun,
   ArrowRight,
-  Info,
+  CheckCircle2,
+  MessageSquare,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-// Icon mapping helper
 const iconMap: Record<string, React.ReactNode> = {
-  ShieldAlert: <ShieldAlert className="w-6 h-6 text-brand-gold" />,
-  Activity: <Activity className="w-6 h-6 text-brand-gold" />,
-  Target: <Target className="w-6 h-6 text-brand-gold" />,
-  Brain: <Brain className="w-6 h-6 text-brand-gold" />,
-  Sparkles: <Sparkles className="w-6 h-6 text-brand-gold" />,
-  Layers: <Layers className="w-6 h-6 text-brand-gold" />,
+  ShieldAlert: <ShieldAlert className="w-5 h-5 text-brand-gold" />,
+  Activity: <Activity className="w-5 h-5 text-brand-gold" />,
+  Target: <Target className="w-5 h-5 text-brand-gold" />,
+  Brain: <Brain className="w-5 h-5 text-brand-gold" />,
+  Sparkles: <Sparkles className="w-5 h-5 text-brand-gold" />,
+  Layers: <Layers className="w-5 h-5 text-brand-gold" />,
+  Bandage: <Bandage className="w-5 h-5 text-brand-gold" />,
+  Compass: <Compass className="w-5 h-5 text-brand-gold" />,
+  Dumbbell: <Dumbbell className="w-5 h-5 text-brand-gold" />,
+  Zap: <Zap className="w-5 h-5 text-brand-gold" />,
+  Maximize2: <Maximize2 className="w-5 h-5 text-brand-gold" />,
+  Radio: <Radio className="w-5 h-5 text-brand-gold" />,
+  Sun: <Sun className="w-5 h-5 text-brand-gold" />,
 };
 
+const categories = [
+  "All Treatments",
+  "Spine & Pain Relief",
+  "Specialized Therapies",
+  "Rehabilitation & Movement",
+  "Clinical Modalities",
+] as const;
+
 export function ServicesGrid() {
-  // Show featured 6 core services on homepage, with link to all 13
-  const featuredServices = servicesData.slice(0, 6);
+  const [activeCategory, setActiveCategory] = useState<string>("All Treatments");
+
+  const filteredServices =
+    activeCategory === "All Treatments"
+      ? servicesData
+      : servicesData.filter((s) => s.category === activeCategory);
+
+  // Featured primary service for the showcase card
+  const featuredService: ServiceItem =
+    filteredServices.find((s) => s.featured) || filteredServices[0];
+  
+  // Companion list of other services
+  const companionServices = filteredServices.filter(
+    (s) => s.id !== featuredService.id
+  ).slice(0, 5);
+
+  const featuredWhatsAppUrl = `https://wa.me/${clinicInfo.whatsappNumber}?text=${encodeURIComponent(
+    `Hello Dr. Farande, I would like to enquire about ${featuredService.title} at Farande Physiotherapy Clinic.`
+  )}`;
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F3EDE2] border-b border-[#E3D6C1]">
+    <section className="py-20 lg:py-28 bg-[#FBF8F2] border-b border-[#E7DDCA]">
       <Container>
-        <SectionHeading
-          eyebrow="Clinical Offerings"
-          title="Personalized Care for Every Condition"
-          description="We combine skilled manual therapy, neuro-muscular retraining, and progressive exercise therapy to relieve discomfort and restore functional independence."
-        />
+        {/* Section Header */}
+        <div className="max-w-3xl mb-10 text-center sm:text-left">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-2">
+            Clinical Offerings
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-dark leading-tight">
+            Specialized Care for Every Condition
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-brand-muted leading-relaxed">
+            From acute disc strain to sports injury rehab, every treatment is tailored to your physical assessment. Explore our core clinical specializations.
+          </p>
+        </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {featuredServices.map((service) => (
-            <Card
-              key={service.id}
-              variant="ivory"
-              className="flex flex-col justify-between group hover:border-brand-gold"
+        {/* Category Filter Tabs */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={cn(
+                "px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all shrink-0 border",
+                activeCategory === cat
+                  ? "bg-brand-forest text-brand-ivory border-brand-forest shadow-sm"
+                  : "bg-brand-white text-brand-charcoal/80 border-[#DECDB5] hover:border-brand-gold hover:text-brand-dark"
+              )}
             >
-              <div className="space-y-4">
-                {/* Header: Icon & Category */}
-                <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-brand-forest/10 border border-brand-forest/15 flex items-center justify-center transition-colors group-hover:bg-brand-forest group-hover:text-brand-gold">
-                    {iconMap[service.icon] || (
-                      <Activity className="w-6 h-6 text-brand-gold" />
-                    )}
-                  </div>
-                  <Badge variant="cream">{service.category}</Badge>
-                </div>
-
-                {/* Title */}
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-brand-dark group-hover:text-brand-forest transition-colors">
-                  {service.title}
-                </h3>
-
-                {/* Short Description */}
-                <p className="text-sm text-brand-muted leading-relaxed">
-                  {service.shortDescription}
-                </p>
-
-                {/* Conditions Addressed Bullets */}
-                <div className="pt-2">
-                  <span className="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider block mb-2">
-                    Common Indications:
-                  </span>
-                  <ul className="space-y-1.5 text-xs text-brand-charcoal/80">
-                    {service.conditionsTreated.slice(0, 3).map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Card Footer: Detail Link */}
-              <div className="pt-6 mt-6 border-t border-[#EFE5D5] flex items-center justify-between">
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-forest group-hover:text-brand-gold transition-colors"
-                >
-                  Treatment Details
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </Link>
-
-                {service.requiresConfirmation && (
-                  <span
-                    title="Offering mentioned in clinical literature; requires verification for local availability."
-                    className="inline-flex items-center text-[10px] text-amber-700 bg-amber-100/70 px-2 py-0.5 rounded"
-                  >
-                    <Info className="w-3 h-3 mr-1" /> Requires Confirmation
-                  </span>
-                )}
-              </div>
-            </Card>
+              {cat}
+            </button>
           ))}
         </div>
 
-        {/* View All Services Footer Banner */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-brand-forest text-brand-ivory flex flex-col sm:flex-row items-center justify-between gap-6 border border-brand-gold/30">
-          <div>
-            <h4 className="font-serif text-xl sm:text-2xl text-white font-normal">
-              Looking for a specific treatment or modality?
-            </h4>
-            <p className="text-xs sm:text-sm text-brand-cream/80 mt-1">
-              Explore all 13 specialized physiotherapy modalities, including IASTM, kinesiology taping, electrotherapy, and decompression.
-            </p>
+        {/* Asymmetric Editorial Showcase Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Column: Featured Detailed Spotlight Card */}
+          <div className="lg:col-span-6 bg-brand-white rounded-3xl p-7 sm:p-9 border border-brand-gold/50 shadow-luxury space-y-6">
+            <div className="flex items-center justify-between pb-4 border-b border-[#F0E6D6]">
+              <div className="flex items-center gap-2.5">
+                <div className="w-10 h-10 rounded-xl bg-brand-forest text-brand-gold flex items-center justify-center shadow-sm">
+                  {iconMap[featuredService.icon] || (
+                    <Activity className="w-5 h-5 text-brand-gold" />
+                  )}
+                </div>
+                <div>
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-brand-gold block">
+                    Featured Spotlight
+                  </span>
+                  <Badge variant="cream" className="mt-0.5 text-[10px] py-0.5">
+                    {featuredService.category}
+                  </Badge>
+                </div>
+              </div>
+              {featuredService.requiresConfirmation && (
+                <span className="text-[10px] text-amber-800 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200 font-medium">
+                  Verify Availability
+                </span>
+              )}
+            </div>
+
+            <div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-brand-dark">
+                {featuredService.title}
+              </h3>
+              <p className="text-sm text-brand-muted leading-relaxed mt-3">
+                {featuredService.overview}
+              </p>
+            </div>
+
+            {/* Conditions Addressed Chips */}
+            <div className="space-y-2 pt-1">
+              <span className="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider block">
+                Primary Conditions Addressed:
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {featuredService.conditionsTreated.slice(0, 4).map((cond, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-cream/60 border border-[#E0D3BF] text-xs text-brand-charcoal font-medium"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-gold" />
+                    {cond}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Featured Actions */}
+            <div className="pt-6 border-t border-[#F0E6D6] flex flex-col sm:flex-row items-center gap-3">
+              <Button
+                href={featuredWhatsAppUrl}
+                isExternal
+                variant="whatsapp"
+                size="md"
+                className="w-full sm:w-auto justify-center"
+              >
+                <MessageSquare className="w-4 h-4 mr-2" />
+                Enquire for {featuredService.title.split("&")[0]}
+              </Button>
+
+              <Link
+                href={`/services/${featuredService.slug}`}
+                className="w-full sm:w-auto text-center px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-forest hover:text-brand-gold transition-colors inline-flex items-center justify-center gap-1.5"
+              >
+                View Full Protocol
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
-          <Button href="/services" variant="gold" size="md" className="shrink-0">
-            View All 13 Services
-            <ArrowRight className="w-4 h-4 ml-1" />
-          </Button>
+
+          {/* Right Column: Companion List of Services */}
+          <div className="lg:col-span-6 space-y-4">
+            <span className="text-xs font-semibold uppercase tracking-wider text-brand-muted block mb-2 px-1">
+              Companion Clinical Services in this Category:
+            </span>
+
+            {companionServices.map((service) => (
+              <div
+                key={service.id}
+                className="p-5 rounded-2xl bg-brand-white border border-[#EADBCC] hover:border-brand-gold shadow-sm hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group"
+              >
+                <div className="flex items-start gap-3.5">
+                  <div className="w-9 h-9 rounded-lg bg-brand-cream/80 text-brand-forest flex items-center justify-center shrink-0 border border-[#DECDB5] group-hover:bg-brand-forest group-hover:text-brand-gold transition-colors mt-0.5">
+                    {iconMap[service.icon] || (
+                      <Activity className="w-4 h-4 text-brand-gold" />
+                    )}
+                  </div>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <h4 className="font-serif text-lg font-bold text-brand-dark group-hover:text-brand-forest transition-colors">
+                        {service.title}
+                      </h4>
+                      {service.requiresConfirmation && (
+                        <span className="text-[9px] text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">
+                          Verify
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-brand-muted line-clamp-2 max-w-md">
+                      {service.shortDescription}
+                    </p>
+                  </div>
+                </div>
+
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-brand-forest group-hover:text-brand-gold transition-colors self-end sm:self-center"
+                >
+                  Details
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            ))}
+
+            {/* View Full Catalog Link */}
+            <div className="pt-2 text-center sm:text-right">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-brand-gold hover:text-brand-forest transition-colors"
+              >
+                Browse complete directory of all 13 services &rarr;
+              </Link>
+            </div>
+          </div>
         </div>
       </Container>
     </section>

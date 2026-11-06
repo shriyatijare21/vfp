@@ -79,3 +79,4 @@ export const clinicInfo: ClinicInfo = {
     justdial: "https://www.justdial.com/Amravati/Farande-Physiotherapy-Clinic-Near-Kali-Mata-Temple-Maltekdi/9999PX721-X721-260816171626-F5F6_BZDET",
   },
 };
+
