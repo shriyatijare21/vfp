@@ -89,7 +89,7 @@ export default function FacilitiesPage() {
               <div className="relative rounded-2xl overflow-hidden border border-brand-gold/40 shadow-luxury bg-[#102B24] group">
                 <Image
                   src="/images/placeholders/clinic-interior.svg"
-                  alt="Farande Physiotherapy Clinic Interior Environment"
+                  alt="Architectural schematic layout of treatment cubicles and rehabilitation suites at Farande Physiotherapy Clinic Amravati"
                   width={640}
                   height={400}
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"

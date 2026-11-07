@@ -1,28 +1,42 @@
 # Clinic Photography & Image Assets Directory
 
-This directory is organized into dedicated subfolders for easy management and replacement of clinic photographs:
+This directory is organized into dedicated subfolders for managing and integrating genuine clinic photographs for **Farande Physiotherapy Clinic**.
 
-## Subfolders & Recommended Dimensions:
+> **Note on Medical Compliance:** The website currently displays dignified, custom-crafted SVG vector graphics and architectural schematics as placeholders. No artificial AI-generated faces or misleading stock interiors are presented as the actual clinic. All asset permissions are tracked in [`docs/image-assets-register.md`](../../docs/image-assets-register.md).
+
+---
+
+## Subfolders & File Placement:
 
 ### 1. `/public/images/doctor/`
-* **File Name:** `doctor-vaibhav-farande.jpg` (or `.webp` / `.png`)
-* **Purpose:** Official portrait of Dr. Vaibhav Ashok Farande (PT) for the Homepage & About page.
-* **Recommended Specs:** Professional clinical portrait, neutral or warm clinic background, 800x1000px (4:5 vertical aspect ratio).
+* **Target File:** `dr-vaibhav-farande.jpg` (or `.webp`)
+* **Purpose:** Official portrait of Dr. Vaibhav Ashok Farande (PT), BPT for the Homepage and About page.
+* **Recommended Specs:** Professional clinical portrait (white coat or formal medical attire), neutral or clinic background, 800 × 1000 px (4:5 vertical aspect ratio).
 
 ### 2. `/public/images/clinic/`
-* **File Names:** `clinic-exterior.jpg`, `clinic-reception.jpg`, `treatment-cubicles.jpg`
-* **Purpose:** Exterior clinic facade with signboard (Sabnis Plot, Maltekdi), reception area, and private treatment beds.
-* **Recommended Specs:** Landscape orientation (16:9 or 4:3), minimum 1200x800px.
+* **Target Files:** `clinic-exterior.jpg`, `clinic-reception.jpg`
+* **Purpose:** Exterior clinic facade with signboard (Shop No. 3, Mahakali Enclave, Sabnis Plot, Maltekdi) and patient reception area.
+* **Recommended Specs:** Landscape orientation (4:3 or 16:9), minimum 1200 × 900 px.
 
-### 3. `/public/images/hero/`
-* **File Names:** `hero-banner.jpg`, `clinic-og.jpg`
-* **Purpose:** Homepage hero banner and OpenGraph social share card (1200x630px).
+### 3. `/public/images/facilities/`
+* **Target File:** `physiotherapy-treatment-room.jpg`
+* **Purpose:** Clean, well-lit view of the private treatment cubicles and ergonomic examination plinths.
+* **Recommended Specs:** Landscape orientation (4:3), minimum 1200 × 900 px.
 
-### 4. `/public/images/services/`
-* **Purpose:** High-resolution photographs of actual clinical assessments and manual therapy sessions (e.g. back pain assessment, dry needling, taping, joint mobilization).
+### 4. `/public/images/equipment/`
+* **Target File:** `therapy-equipment.jpg`
+* **Purpose:** Close-up of active clinical electrotherapy devices (TENS/IFT), mobilization tools, and single-use dry needling supplies.
+* **Recommended Specs:** Landscape orientation (4:3), minimum 1200 × 900 px.
 
-### 5. `/public/images/equipment/`
-* **Purpose:** Verified equipment present at the clinic (electrotherapy, mobilization tables, resistance bands).
+### 5. `/public/images/treatments/`
+* **Target File:** `dry-needling-procedure.jpg`, `joint-mobilization-session.jpg`
+* **Purpose:** Real hands-on physical therapy session photographs.
+* **Compliance Requirement:** Must have signed patient medical photography consent on file before publication.
 
-> **Note on Compliance:** All placeholder graphics currently rendered in the website use bespoke brand-themed vector illustrations to ensure no artificial/unverified imagery is misrepresented as the actual clinic.
+### 6. `/public/images/hero/`
+* **Active Files:** `clinic-og.svg` (Active 1200 × 630 px social sharing banner)
+* **Future Replacement:** `hero-treatment.jpg`
 
+---
+
+*Refer to [`docs/image-assets-register.md`](../../docs/image-assets-register.md) for full permissions and copyright audit details.*

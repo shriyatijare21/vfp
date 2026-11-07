@@ -1,45 +1,71 @@
 <svg width="600" height="750" viewBox="0 0 600 750" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="doctorCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#14342B"/>
-      <stop offset="50%" stop-color="#173D32"/>
+      <stop offset="40%" stop-color="#173D32"/>
       <stop offset="100%" stop-color="#102B24"/>
     </linearGradient>
-    <radialGradient id="goldGlow" cx="50%" cy="35%" r="45%">
-      <stop offset="0%" stop-color="#C6A45C" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#173D32" stop-opacity="0"/>
+    <radialGradient id="subtleGlow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#C6A45C" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#102B24" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#C6A45C" stroke-opacity="0.08" stroke-width="0.8"/>
-    </pattern>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4D2A5"/>
+      <stop offset="50%" stop-color="#C6A45C"/>
+      <stop offset="100%" stop-color="#8E7036"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="600" height="750" rx="24" fill="url(#bgGrad)"/>
-  <rect width="600" height="750" rx="24" fill="url(#gridPattern)"/>
-  <rect width="600" height="750" rx="24" fill="url(#goldGlow)"/>
+  <!-- Background Canvas -->
+  <rect width="600" height="750" rx="20" fill="url(#doctorCardBg)"/>
+  <rect width="600" height="750" rx="20" fill="url(#subtleGlow)"/>
 
-  <!-- Gold Hairline Frame -->
-  <rect x="24" y="24" width="552" height="702" rx="16" stroke="#C6A45C" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Restrained Gold Hairline Inset -->
+  <rect x="20" y="20" width="560" height="710" rx="14" stroke="url(#goldBorder)" stroke-opacity="0.35" stroke-width="1.2"/>
 
-  <!-- Silhouette Icon Group -->
-  <g transform="translate(180, 160)">
-    <!-- Doctor Head & Shoulders Silhouette -->
-    <circle cx="120" cy="110" r="70" fill="#1B473B" stroke="#C6A45C" stroke-width="2"/>
-    <path d="M40 310 C40 215, 80 195, 120 195 C160 195, 200 215, 200 310 Z" fill="#1B473B" stroke="#C6A45C" stroke-width="2"/>
+  <!-- Dignified Botanical / Clinical Crest Motif -->
+  <g transform="translate(300, 190)">
+    <!-- Outer concentric gold rings -->
+    <circle cx="0" cy="0" r="110" stroke="#C6A45C" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <circle cx="0" cy="0" r="95" fill="#113027" stroke="url(#goldBorder)" stroke-width="1.5"/>
+
+    <!-- Subtle Caduceus / Healing Hands Symbolism -->
+    <path d="M-30 25 C-30 -25, 0 -55, 0 -70 C0 -55, 30 -25, 30 25 C20 45, -20 45, -30 25 Z" fill="#173D32" stroke="#E4D2A5" stroke-width="2"/>
+    <path d="M0 -75 V45" stroke="#C6A45C" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="-75" r="7" fill="#E4D2A5"/>
     
-    <!-- Stethoscope Accent -->
-    <path d="M95 240 C95 275, 145 275, 145 240 V205" fill="none" stroke="#E4D2A5" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="120" cy="278" r="9" fill="#C6A45C"/>
+    <!-- Anatomical Spinal Nodes in Crest -->
+    <ellipse cx="0" cy="-40" rx="12" ry="5" fill="#C6A45C" fill-opacity="0.7"/>
+    <ellipse cx="0" cy="-22" rx="14" ry="5.5" fill="#C6A45C" fill-opacity="0.7"/>
+    <ellipse cx="0" cy="-4" rx="16" ry="6" fill="#C6A45C" fill-opacity="0.7"/>
+    <ellipse cx="0" cy="15" rx="18" ry="6.5" fill="#C6A45C" fill-opacity="0.7"/>
+
+    <!-- Decorative Olive / Laurel sprigs -->
+    <path d="M-60 15 C-75 -15, -60 -45, -45 -60" fill="none" stroke="#C6A45C" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M60 15 C75 -15, 60 -45, 45 -60" fill="none" stroke="#C6A45C" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
   </g>
 
-  <!-- Central Badge -->
-  <g transform="translate(100, 500)">
-    <rect width="400" height="140" rx="16" fill="#102B24" fill-opacity="0.85" stroke="#C6A45C" stroke-width="1.5"/>
-    <text x="200" y="38" text-anchor="middle" fill="#C6A45C" font-family="system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="2">CLIENT PHOTOGRAPHY PLACEHOLDER</text>
-    <text x="200" y="70" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, serif" font-size="22" font-weight="bold">Dr. Vaibhav Ashok Farande (PT)</text>
-    <text x="200" y="98" text-anchor="middle" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="14" font-weight="500">BPT | Consultant Physiotherapist</text>
-    <text x="200" y="122" text-anchor="middle" fill="#716F66" font-family="system-ui, sans-serif" font-size="11">Replace with high-res portrait in /public/images/doctor/</text>
+  <!-- Physician Editorial Typography Block -->
+  <g transform="translate(60, 390)">
+    <!-- Small Category Pill -->
+    <rect x="140" y="0" width="200" height="26" rx="13" fill="#102B24" stroke="#C6A45C" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="240" y="17" text-anchor="middle" fill="#E4D2A5" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.5">CHIEF CONSULTANT</text>
+
+    <!-- Doctor Name -->
+    <text x="240" y="65" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, Cambria, serif" font-size="26" font-weight="normal">Dr. Vaibhav Ashok Farande</text>
+    
+    <!-- Degree & Title -->
+    <text x="240" y="96" text-anchor="middle" fill="#C6A45C" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" letter-spacing="0.5">BPT (Bachelor of Physiotherapy)</text>
+    
+    <!-- Academic Affiliation -->
+    <text x="240" y="124" text-anchor="middle" fill="#EFE8DA" fill-opacity="0.85" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400">Postgraduate Scholar &bull; School of Health Sciences</text>
+    <text x="240" y="145" text-anchor="middle" fill="#EFE8DA" fill-opacity="0.7" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="400">Garden City University</text>
+
+    <!-- Hairline Separator -->
+    <line x1="120" y1="175" x2="360" y2="175" stroke="#C6A45C" stroke-opacity="0.25" stroke-width="1"/>
+
+    <!-- Subtle Clinic Note -->
+    <text x="240" y="210" text-anchor="middle" fill="#C6A45C" fill-opacity="0.9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" letter-spacing="0.5">Farande Physiotherapy Clinic &bull; Amravati</text>
+    <text x="240" y="235" text-anchor="middle" fill="#716F66" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400">Genuine in-clinic photography pending client session</text>
   </g>
 </svg>
-

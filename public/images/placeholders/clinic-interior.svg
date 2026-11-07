@@ -1,24 +1,67 @@
 <svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="clinicBg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="clinicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#14342B"/>
+      <stop offset="60%" stop-color="#173D32"/>
       <stop offset="100%" stop-color="#102B24"/>
     </linearGradient>
+    <radialGradient id="clinicWarmth" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#C6A45C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#102B24" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <rect width="800" height="500" rx="20" fill="url(#clinicBg)"/>
-  
-  <!-- Architectural lines -->
-  <line x1="80" y1="360" x2="720" y2="360" stroke="#C6A45C" stroke-opacity="0.3" stroke-width="1.5"/>
-  <rect x="120" y="160" width="240" height="180" rx="8" fill="#173D32" stroke="#C6A45C" stroke-opacity="0.25" stroke-width="1.5"/>
-  <rect x="440" y="160" width="240" height="180" rx="8" fill="#173D32" stroke="#C6A45C" stroke-opacity="0.25" stroke-width="1.5"/>
+  <!-- Background -->
+  <rect width="800" height="500" rx="20" fill="url(#clinicGrad)"/>
+  <rect width="800" height="500" rx="20" fill="url(#clinicWarmth)"/>
 
-  <!-- Center Plaque -->
-  <g transform="translate(180, 210)">
-    <rect width="440" height="120" rx="14" fill="#102B24" fill-opacity="0.9" stroke="#C6A45C" stroke-width="1.5"/>
-    <text x="220" y="36" text-anchor="middle" fill="#C6A45C" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2">CLINIC FACILITY PLACEHOLDER</text>
-    <text x="220" y="68" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, serif" font-size="20" font-weight="bold">Farande Physiotherapy Clinic</text>
-    <text x="220" y="94" text-anchor="middle" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="13">Sabnis Plot, Near Kali Mata Temple, Maltekdi, Amravati</text>
+  <!-- Gold Hairline Inset Frame -->
+  <rect x="20" y="20" width="760" height="460" rx="14" stroke="#C6A45C" stroke-opacity="0.3" stroke-width="1.2"/>
+
+  <!-- Architectural Clinical Layout Plan -->
+  <g transform="translate(80, 70)">
+    <!-- Header Banner -->
+    <rect x="0" y="0" width="640" height="45" rx="8" fill="#102B24" stroke="#C6A45C" stroke-opacity="0.35" stroke-width="1"/>
+    <text x="20" y="27" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">CLINICAL FACILITY ARCHITECTURAL SCHEMATIC</text>
+    <text x="620" y="27" text-anchor="end" fill="#C6A45C" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500">Shop No. 3 &bull; Maltekdi, Amravati</text>
+
+    <!-- Floorplan Cubicles -->
+    <!-- Room 1: Consultation & Assessment -->
+    <rect x="0" y="65" width="200" height="180" rx="10" fill="#123329" stroke="#C6A45C" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="15" y="80" width="170" height="24" rx="4" fill="#1A4537"/>
+    <text x="100" y="96" text-anchor="middle" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="10" font-weight="600">SUITE 1: ASSESSMENT</text>
+    <!-- Examination Plinth Vector -->
+    <rect x="35" y="125" width="130" height="70" rx="6" fill="#173D32" stroke="#E4D2A5" stroke-opacity="0.6" stroke-width="1.2"/>
+    <line x1="65" y1="125" x2="65" y2="195" stroke="#C6A45C" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="50" cy="160" r="12" fill="#102B24" stroke="#C6A45C" stroke-width="1"/>
+    <text x="100" y="215" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500">Ergonomic Examination Plinth</text>
+
+    <!-- Room 2: Electrotherapy & Manual Mobilization -->
+    <rect x="220" y="65" width="200" height="180" rx="10" fill="#123329" stroke="#C6A45C" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="235" y="80" width="170" height="24" rx="4" fill="#1A4537"/>
+    <text x="320" y="96" text-anchor="middle" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="10" font-weight="600">SUITE 2: MANUAL THERAPY</text>
+    <!-- Plinth + Instrument Station -->
+    <rect x="255" y="125" width="130" height="70" rx="6" fill="#173D32" stroke="#E4D2A5" stroke-opacity="0.6" stroke-width="1.2"/>
+    <line x1="285" y1="125" x2="285" y2="195" stroke="#C6A45C" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="270" cy="160" r="12" fill="#102B24" stroke="#C6A45C" stroke-width="1"/>
+    <text x="320" y="215" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500">Needle Hygiene &amp; IFT Station</text>
+
+    <!-- Room 3: Active Exercise & Rehabilitation Zone -->
+    <rect x="440" y="65" width="200" height="180" rx="10" fill="#123329" stroke="#C6A45C" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="455" y="80" width="170" height="24" rx="4" fill="#1A4537"/>
+    <text x="540" y="96" text-anchor="middle" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="10" font-weight="600">SUITE 3: ACTIVE REHAB</text>
+    <!-- Rehabilitation Mat & Resistance Stations -->
+    <rect x="465" y="125" width="150" height="70" rx="6" fill="#173D32" stroke="#E4D2A5" stroke-opacity="0.6" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <circle cx="510" cy="160" r="14" fill="#102B24" stroke="#C6A45C" stroke-width="1.2"/>
+    <circle cx="570" cy="160" r="14" fill="#102B24" stroke="#C6A45C" stroke-width="1.2"/>
+    <text x="540" y="215" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500">Resistance &amp; Balance Station</text>
+
+    <!-- Bottom Verification Card -->
+    <g transform="translate(0, 265)">
+      <rect width="640" height="75" rx="10" fill="#102B24" fill-opacity="0.9" stroke="#C6A45C" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="25" y="32" fill="#FFFFFF" font-family="Georgia, Cambria, serif" font-size="16" font-weight="normal">Farande Physiotherapy Clinic &bull; Amravati</text>
+      <text x="25" y="55" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="11.5">Acoustically private cubicles &bull; Single-use sterile needling protocols &bull; Ergonomic plinths</text>
+      <text x="615" y="44" text-anchor="end" fill="#716F66" font-family="system-ui, sans-serif" font-size="10.5">Authentic clinic photography pending on-site shoot</text>
+    </g>
   </g>
 </svg>
-

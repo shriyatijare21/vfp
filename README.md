@@ -138,7 +138,7 @@ Until real high-resolution photographs are supplied by Dr. Vaibhav Farande, the 
 | **Hero Graphic** | `public/images/hero/hero-treatment.jpg` | 1200 × 900 px (4:3) | Hands-on physical therapy session or modern spine care setup. |
 | **Social OG Banner** | `public/images/hero/clinic-og.jpg` | 1200 × 630 px (1.91:1) | Branded social preview card for WhatsApp, Facebook, LinkedIn previews. |
 
-*See [`public/images/README.md`](public/images/README.md) for full aspect-ratio details.*
+*See [`public/images/README.md`](public/images/README.md) and the comprehensive [`docs/image-assets-register.md`](docs/image-assets-register.md) for full permissions and copyright audit details.*
 
 ---
 

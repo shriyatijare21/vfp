@@ -123,7 +123,7 @@ export function Hero() {
                 <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-brand-gold/30 bg-[#122F26] flex items-center justify-center group">
                   <Image
                     src="/images/placeholders/hero-graphic.svg"
-                    alt="Farande Physiotherapy Spine and Neuromuscular Care Illustration"
+                    alt="Biomechanical spine and neuromuscular movement diagram - Farande Physiotherapy Clinic"
                     width={500}
                     height={375}
                     priority
