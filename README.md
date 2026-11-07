@@ -16,7 +16,7 @@ This website serves as the primary digital presence and appointment enquiry chan
 - **Consultation Hours:** Monday – Saturday: 9:00 AM – 2:00 PM & 2:30 PM – 8:00 PM (Sunday: Closed / Prior appointment)
 - **Target Production Domain:** `https://farandephysio.in` (Domain purchase pending)
 - **Live Preview URL:** `https://vfpcom.vercel.app`
-- **GitHub Repository:** [https://github.com/shriyatijare21/vfp.git](https://github.com/shriyatijare21/vfp.git)
+- **GitHub Repository:** [https://github.com/shriyatijare21/vfp.com.git](https://github.com/shriyatijare21/vfp.com.git)
 
 ---
 
