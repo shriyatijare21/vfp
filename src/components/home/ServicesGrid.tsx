@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { servicesData, ServiceItem } from "@/data/services";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
@@ -140,6 +141,38 @@ export function ServicesGrid() {
               <p className="text-sm text-brand-muted leading-relaxed mt-3">
                 {featuredService.overview}
               </p>
+
+              {featuredService.slug === "dry-needling" && (
+                <div className="relative rounded-2xl overflow-hidden border border-[#DECDB5] mt-4 mb-2 group">
+                  <Image
+                    src="/images/treatments/dry-needling-procedure.jpg"
+                    alt="Clinical dry needling procedure at Farande Physiotherapy Clinic"
+                    width={848}
+                    height={478}
+                    className="w-full h-44 object-cover"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-brand-dark/85 px-3 py-1.5 text-[10px] text-brand-ivory flex justify-between items-center">
+                    <span>Sterile Trigger Point Dry Needling</span>
+                    <span className="text-brand-gold-light">Dr. Vaibhav Farande</span>
+                  </div>
+                </div>
+              )}
+
+              {featuredService.slug === "electrotherapy" && (
+                <div className="relative rounded-2xl overflow-hidden border border-[#DECDB5] mt-4 mb-2 group">
+                  <Image
+                    src="/images/equipment/therapy-equipment.jpg"
+                    alt="In-clinic electrotherapy equipment at Farande Physiotherapy Clinic"
+                    width={1066}
+                    height={800}
+                    className="w-full h-44 object-cover object-center"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-brand-dark/85 px-3 py-1.5 text-[10px] text-brand-ivory flex justify-between items-center">
+                    <span>Active Electrotherapy Station</span>
+                    <span className="text-brand-gold-light">Amravati Premises</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Conditions Addressed Chips */}

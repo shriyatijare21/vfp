@@ -10,7 +10,7 @@ This directory is organized into dedicated subfolders for managing and integrati
 
 ### 1. `/public/images/doctor/`
 * **Target File:** `dr-vaibhav-farande.jpg` (or `.webp`)
-* **Purpose:** Official portrait of Dr. Vaibhav Ashok Farande (PT), BPT for the Homepage and About page.
+* **Purpose:** Official portrait of Dr. Vaibhav Ashok Farande (PT), BPT + MPT (Sports) for the Homepage and About page.
 * **Recommended Specs:** Professional clinical portrait (white coat or formal medical attire), neutral or clinic background, 800 × 1000 px (4:5 vertical aspect ratio).
 
 ### 2. `/public/images/clinic/`

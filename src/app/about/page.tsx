@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "About Dr. Vaibhav Farande & Our Clinic | Amravati",
   description:
-    "Learn about Dr. Vaibhav Ashok Farande (PT), BPT, postgraduate researcher at Garden City University, and the evidence-informed care philosophy at Farande Physiotherapy Clinic in Amravati.",
+    "Learn about Dr. Vaibhav Ashok Farande (PT), BPT + MPT (Sports), consultant physiotherapist, and the evidence-informed care philosophy at Farande Physiotherapy Clinic in Amravati.",
   alternates: {
     canonical: "https://farandephysio.in/about",
   },
@@ -38,10 +38,8 @@ export default function AboutPage() {
       <Breadcrumb items={[{ label: "About Clinic & Doctor" }]} />
 
       {/* Hero Header */}
-      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#102B24] via-[#14342B] to-[#173D32] text-brand-ivory border-b border-brand-gold/30 relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
-
-        <Container className="relative z-10">
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#102B24] via-[#14342B] to-[#173D32] text-brand-ivory border-b border-brand-gold/30">
+        <Container>
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold-light text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
@@ -66,8 +64,6 @@ export default function AboutPage() {
             {/* Left Doctor Portrait & Verified Credential Plaque */}
             <div className="lg:col-span-5 sticky top-28">
               <div className="relative mx-auto max-w-md">
-                <div className="absolute -inset-2.5 rounded-3xl border-2 border-brand-gold/40 transform rotate-1 pointer-events-none" />
-
                 <div className="relative rounded-2xl overflow-hidden bg-brand-dark border border-brand-gold/60 shadow-luxury p-6 sm:p-7 text-center space-y-6">
                   {/* Doctor Portrait Image Frame */}
                   <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-gold/40 bg-[#14342B] group">
@@ -80,7 +76,7 @@ export default function AboutPage() {
                       className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-3 right-3 bg-brand-dark/90 text-brand-gold-light text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full border border-brand-gold/30">
-                      BPT Qualified
+                      BPT + MPT (Sports)
                     </div>
                   </div>
 
@@ -135,10 +131,10 @@ export default function AboutPage() {
                   Academic Rigor Meets Compassionate Clinical Practice
                 </h2>
                 <p className="text-base sm:text-lg text-brand-charcoal/90 leading-relaxed font-normal">
-                  <strong>Dr. Vaibhav Ashok Farande (PT)</strong> completed his <strong>Bachelor of Physiotherapy (BPT)</strong> degree, acquiring extensive clinical foundations in neuro-anatomy, orthopedic evaluation, biomechanics, and manual mobilization.
+                  <strong>Dr. Vaibhav Ashok Farande (PT)</strong> holds <strong>BPT + MPT (Sports)</strong> qualifications, combining deep clinical foundations in biomechanics, orthopedic evaluation, and manual mobilization with specialized master&apos;s training in sports injuries and exercise physiology.
                 </p>
                 <p className="text-sm sm:text-base text-brand-muted leading-relaxed">
-                  Driven by a commitment to advancing evidence-informed rehabilitation, he is actively engaged in postgraduate research at the <strong>School of Health Sciences, Garden City University</strong>. His ongoing investigations explore the therapeutic applications and neuromuscular responses of <strong>dry needling in tendinopathy</strong>.
+                  Driven by a commitment to advancing evidence-informed rehabilitation, he is actively engaged in clinical research with the <strong>School of Health Sciences, Garden City University</strong>. His academic investigations explore the physiological mechanisms, muscle activation responses, and clinical outcomes of <strong>dry needling in chronic tendinopathies</strong>.
                 </p>
               </div>
 
@@ -146,19 +142,19 @@ export default function AboutPage() {
               <div className="bg-brand-white rounded-2xl p-6 sm:p-7 border border-[#DECDB5] shadow-sm space-y-4">
                 <h3 className="font-serif text-lg font-bold text-brand-dark flex items-center gap-2">
                   <GraduationCap className="w-5 h-5 text-brand-gold" />
-                  Verified Educational &amp; Research Foundations
+                  Verified Educational &amp; Clinical Foundations
                 </h3>
                 <ul className="space-y-3 text-xs sm:text-sm text-brand-charcoal">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>
-                      <strong>Bachelor of Physiotherapy (BPT):</strong> Comprehensive undergraduate clinical medical curriculum covering human anatomy, movement physiology, musculoskeletal therapy, and neurology.
+                      <strong>BPT + MPT (Sports):</strong> Bachelor of Physiotherapy and Master of Physiotherapy (Sports Rehabilitation), delivering advanced clinical expertise in athletic rehabilitation, movement biomechanics, and manual therapy.
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>
-                      <strong>Postgraduate Researcher:</strong> School of Health Sciences, Garden City University, investigating targeted physical modalities and tendinous recovery protocols.
+                      <strong>Clinical Research Investigator:</strong> School of Health Sciences, Garden City University, studying physiological responses and clinical recovery in musculoskeletal conditions.
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">

@@ -22,7 +22,7 @@
   <!-- Title -->
   <text x="100" y="300" fill="#FFFFFF" font-family="Georgia, serif" font-size="54" font-weight="bold">Farande Physiotherapy Clinic</text>
   <text x="100" y="360" fill="#C6A45C" font-family="Georgia, serif" font-size="34" font-style="italic">Dr. Vaibhav Ashok Farande (PT)</text>
-  <text x="590" y="360" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="22" font-weight="500">| BPT, Musculoskeletal & Neuro Rehab</text>
+  <text x="590" y="360" fill="#E4D2A5" font-family="system-ui, sans-serif" font-size="22" font-weight="500">| BPT + MPT (Sports)</text>
 
   <!-- Subtitle -->
   <text x="100" y="425" fill="#EFE8DA" font-family="system-ui, sans-serif" font-size="22" opacity="0.85">Evidence-informed physical therapy, dry needling, spine care & sports rehabilitation.</text>

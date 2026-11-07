@@ -15,9 +15,6 @@ export function ResearchSpotlight() {
     <section className="py-20 lg:py-28 bg-[#FBF8F2] border-b border-[#E7DDCA]">
       <Container>
         <div className="bg-brand-cream/80 rounded-3xl border border-[#DECDB5] p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-luxury">
-          {/* Subtle background crest */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-brand-forest/5 rounded-full blur-3xl pointer-events-none" />
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">

@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     template: `%s | ${clinicInfo.name}`,
   },
   description:
-    "Farande Physiotherapy Clinic in Amravati, Maharashtra. Led by Dr. Vaibhav Ashok Farande (PT), providing evidence-based care for back pain, sports injuries, dry needling, neuro rehab, and posture correction.",
+    "Farande Physiotherapy Clinic in Amravati, Maharashtra. Led by Dr. Vaibhav Ashok Farande (PT), BPT + MPT (Sports), providing evidence-informed care for sports injuries, back and neck pain, dry needling, neuro rehab, and posture correction.",
   keywords: [
     "Physiotherapy in Amravati",
     "Physiotherapist in Amravati",
-    "Best Physiotherapist Amravati",
+    "Sports Physiotherapy Amravati",
     "Dr Vaibhav Farande",
     "Farande Physiotherapy Clinic",
     "Back Pain Relief Amravati",

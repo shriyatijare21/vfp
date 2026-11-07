@@ -20,10 +20,7 @@ export function DoctorIntro() {
           {/* Left Column: Doctor Portrait Presentation Card */}
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative mx-auto max-w-md">
-              {/* Gold double decorative frame */}
-              <div className="absolute -inset-3 rounded-3xl border-2 border-brand-gold/40 transform rotate-1 pointer-events-none" />
-
-              <div className="relative rounded-2xl overflow-hidden bg-brand-dark border border-brand-gold/60 shadow-luxury p-6 text-center space-y-6">
+              <div className="relative rounded-2xl overflow-hidden bg-brand-dark border border-brand-gold/50 shadow-luxury p-6 text-center space-y-6">
                 {/* Doctor Photograph */}
                 <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-gold/40 bg-[#14342B] group">
                   <Image
@@ -34,7 +31,7 @@ export function DoctorIntro() {
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute top-3 right-3 bg-brand-dark/90 text-brand-gold-light text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full border border-brand-gold/30">
-                    BPT Qualified
+                    BPT + MPT (Sports)
                   </div>
                 </div>
 
@@ -91,7 +88,7 @@ export function DoctorIntro() {
             </h2>
 
             <p className="text-base sm:text-lg text-brand-charcoal/90 leading-relaxed font-normal">
-              At <strong>Farande Physiotherapy Clinic</strong>, care is guided personally by <strong>Dr. Vaibhav Ashok Farande (PT)</strong>. Holding a <em>Bachelor of Physiotherapy (BPT)</em> degree and actively contributing as a postgraduate researcher in the <em>School of Health Sciences at Garden City University</em>, Dr. Farande combines clinical precision with genuine patient empathy.
+              At <strong>Farande Physiotherapy Clinic</strong>, care is guided personally by <strong>Dr. Vaibhav Ashok Farande (PT)</strong>. Holding <em>BPT + MPT (Sports)</em> qualifications and actively engaged in clinical research with the <em>School of Health Sciences at Garden City University</em>, Dr. Farande combines sports rehabilitation precision with genuine patient empathy.
             </p>
 
             <blockquote className="p-4 sm:p-5 rounded-xl bg-brand-white border-l-4 border-brand-gold text-brand-charcoal italic font-serif text-base sm:text-lg leading-relaxed shadow-sm">
@@ -102,14 +99,14 @@ export function DoctorIntro() {
               <div className="flex items-start gap-3">
                 <GraduationCap className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm text-brand-charcoal">
-                  <strong>Formal Degree:</strong> Bachelor of Physiotherapy (BPT) with rigorous practical training across musculoskeletal, neurological, and post-operative physical therapy.
+                  <strong>Formal Qualifications:</strong> Bachelor of Physiotherapy (BPT) &amp; Master of Physiotherapy (MPT - Sports), providing specialized clinical expertise in athletic rehabilitation, biomechanics, and targeted manual therapy.
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
                 <BookOpen className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm text-brand-charcoal">
-                  <strong>Academic Research:</strong> Active postgraduate scholar investigating the physiological mechanisms and clinical efficacy of dry needling in chronic tendinopathies.
+                  <strong>Academic Research:</strong> Active postgraduate researcher investigating physiological mechanisms and clinical recovery protocols in tendinopathies and spine mechanics.
                 </span>
               </div>
 

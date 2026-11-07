@@ -1,7 +1,7 @@
 # Farande Physiotherapy Clinic — Official Marketing Website
 
 > **"The caring hands you deserve."**  
-> A boutique, editorial-grade marketing website for **Farande Physiotherapy Clinic**, located in Amravati, Maharashtra, India. Led by **Dr. Vaibhav Ashok Farande (PT)**, BPT (Bachelor of Physiotherapy), postgraduate researcher at the School of Health Sciences, Garden City University.
+> A boutique, editorial-grade marketing website for **Farande Physiotherapy Clinic**, located in Amravati, Maharashtra, India. Led by **Dr. Vaibhav Ashok Farande (PT)**, BPT + MPT (Sports), consultant sports and musculoskeletal physiotherapist.
 
 ---
 
@@ -10,11 +10,12 @@
 This website serves as the primary digital presence and appointment enquiry channel for Farande Physiotherapy Clinic. Designed with a warm, clinical, boutique aesthetic (Deep Forest Green, Warm Ivory, and Champagne Gold), it presents the clinic's 13 evidence-informed physiotherapy modalities, research initiatives, facilities, and direct WhatsApp consultation booking.
 
 - **Client:** Farande Physiotherapy Clinic
-- **Chief Consultant:** Dr. Vaibhav Ashok Farande (PT), BPT
+- **Chief Consultant:** Dr. Vaibhav Ashok Farande (PT), BPT + MPT (Sports)
 - **Clinic Address:** Shop No. 3, Mahakali Enclave, Sabnis Plot, Near Kali Mata Temple, Maltekdi, Amravati, Maharashtra – 444606, India
 - **Helpline & WhatsApp:** `+91 70300 89050`
 - **Consultation Hours:** Monday – Saturday: 9:00 AM – 2:00 PM & 2:30 PM – 8:00 PM (Sunday: Closed / Prior appointment)
 - **Target Production Domain:** `https://farandephysio.in` (Domain purchase pending)
+- **Live Preview URL:** `https://vfpcom.vercel.app`
 - **GitHub Repository:** [https://github.com/shriyatijare21/vfp.git](https://github.com/shriyatijare21/vfp.git)
 
 ---
@@ -35,8 +36,8 @@ This website serves as the primary digital presence and appointment enquiry chan
 
 | Route | Purpose & Content | Status |
 |---|---|:---:|
-| `/` | **Homepage:** Hero with value proposition, Doctor spotlight, Services preview, Treatment journey, Why choose us, Research feature, Maltekdi location, and appointment CTAs. | Complete |
-| `/about` | **About Doctor & Clinic:** Dr. Vaibhav Farande's academic background (BPT, Garden City University), practice philosophy, 4 clinical pillars, and care standards. | Complete |
+| `/` | **Homepage:** Hero with value proposition, Doctor spotlight, Services preview, Treatment journey, Practice care principles, Research feature, Maltekdi location, and appointment CTAs. | Complete |
+| `/about` | **About Doctor & Clinic:** Dr. Vaibhav Farande's academic and sports background (BPT + MPT Sports, Garden City University), practice philosophy, 4 clinical pillars, and care standards. | Complete |
 | `/services` | **Physiotherapy Services:** Comprehensive catalog of 13 modalities with interactive category filter tabs, clinical indications, expected outcomes, and per-service WhatsApp enquiry CTAs. | Complete |
 | `/services/[slug]` | **Service Detail Views:** Static generation for all 13 services (e.g. `/services/dry-needling`, `/services/back-pain-relief`), structured clinical overview, protocol walkthrough, and sticky booking sidebar. | Complete |
 | `/facilities` | **Facilities & Equipment:** Treatment plinths, electrotherapy modalities, single-use needle hygiene protocols, and transparent notice of pending advanced equipment. | Complete |

@@ -96,10 +96,18 @@ export function SchemaJsonLd() {
           "@type": "Person",
           name: clinicInfo.doctorName,
           jobTitle: clinicInfo.doctorTitle,
-          alumniOf: {
-            "@type": "EducationalOrganization",
-            name: "Bachelor of Physiotherapy (BPT)",
-          },
+          hasCredential: [
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "degree",
+              name: "Bachelor of Physiotherapy (BPT)",
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "degree",
+              name: "Master of Physiotherapy in Sports (MPT Sports)",
+            },
+          ],
         },
       },
       {
@@ -115,11 +123,18 @@ export function SchemaJsonLd() {
           name: "Garden City University",
           department: "School of Health Sciences",
         },
-        hasCredential: {
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: "degree",
-          name: "Bachelor of Physiotherapy (BPT)",
-        },
+        hasCredential: [
+          {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "degree",
+            name: "Bachelor of Physiotherapy (BPT)",
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "degree",
+            name: "Master of Physiotherapy in Sports (MPT Sports)",
+          },
+        ],
         sameAs: [
           clinicInfo.social.researchGate,
           clinicInfo.social.linkedIn,

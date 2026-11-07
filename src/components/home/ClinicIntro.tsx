@@ -1,10 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import {
-  HeartHandshake,
-  Microscope,
-  ShieldCheck,
   ArrowRight,
   Sparkles,
 } from "lucide-react";
@@ -47,51 +45,46 @@ export function ClinicIntro() {
             </div>
           </div>
 
-          {/* Right Column: 3 Pillars with Editorial Hierarchy */}
-          <div className="lg:col-span-5 space-y-4">
-            {/* Pillar 1 */}
-            <div className="p-6 rounded-2xl bg-brand-white border border-[#EADBCC] shadow-sm hover:border-brand-gold/60 transition-all duration-300 space-y-2">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-brand-cream text-brand-forest flex items-center justify-center border border-[#DECDB5]">
-                  <HeartHandshake className="w-4 h-4 text-brand-gold" />
+          {/* Right Column: Genuine Clinic Reception Photography & Core Care Ethos */}
+          <div className="lg:col-span-5 space-y-5">
+            <div className="relative rounded-2xl overflow-hidden border border-[#DECDB5] shadow-luxury bg-brand-forest group">
+              <Image
+                src="/images/clinic/clinic-reception.jpg"
+                alt="Patient reception and consultation lounge at Farande Physiotherapy Clinic, Amravati"
+                width={1600}
+                height={1066}
+                className="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-3 left-3 right-3 bg-brand-dark/90 backdrop-blur-sm p-3 rounded-xl border border-brand-gold/30 text-xs text-brand-ivory flex items-center justify-between">
+                <div>
+                  <p className="font-semibold text-brand-ivory text-xs">Clinic Reception &amp; Waiting Lounge</p>
+                  <p className="text-[11px] text-brand-cream/70">Shop No. 3, Mahakali Enclave, Maltekdi</p>
                 </div>
-                <h3 className="font-serif text-lg font-bold text-brand-dark">
-                  Unhurried One-on-One Attention
-                </h3>
+                <span className="text-[10px] uppercase tracking-wider font-semibold text-brand-gold px-2 py-0.5 rounded bg-brand-forest border border-brand-gold/30">
+                  Amravati
+                </span>
               </div>
-              <p className="text-xs text-brand-muted leading-relaxed pl-12">
-                Every consultation is conducted directly with Dr. Vaibhav Farande. We take the time needed to thoroughly palpate, assess, and explain your condition.
-              </p>
             </div>
 
-            {/* Pillar 2 */}
-            <div className="p-6 rounded-2xl bg-brand-white border border-[#EADBCC] shadow-sm hover:border-brand-gold/60 transition-all duration-300 space-y-2">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-brand-cream text-brand-forest flex items-center justify-center border border-[#DECDB5]">
-                  <Microscope className="w-4 h-4 text-brand-gold" />
-                </div>
-                <h3 className="font-serif text-lg font-bold text-brand-dark">
-                  Evidence-Informed Methodology
+            {/* Editorial Care Points */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+              <div className="border-l-2 border-brand-gold/60 pl-3 space-y-1">
+                <h3 className="font-serif text-sm font-bold text-brand-dark">
+                  Direct Doctor Consultation
                 </h3>
+                <p className="text-xs text-brand-muted leading-relaxed">
+                  Care is conducted directly by Dr. Vaibhav Farande, BPT + MPT (Sports).
+                </p>
               </div>
-              <p className="text-xs text-brand-muted leading-relaxed pl-12">
-                We integrate contemporary clinical research in dry needling and biomechanics, drawing on Dr. Farande&apos;s academic scholarship at Garden City University to ensure every technique has sound therapeutic rationale.
-              </p>
-            </div>
 
-            {/* Pillar 3 */}
-            <div className="p-6 rounded-2xl bg-brand-white border border-[#EADBCC] shadow-sm hover:border-brand-gold/60 transition-all duration-300 space-y-2">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-brand-cream text-brand-forest flex items-center justify-center border border-[#DECDB5]">
-                  <ShieldCheck className="w-4 h-4 text-brand-gold" />
-                </div>
-                <h3 className="font-serif text-lg font-bold text-brand-dark">
-                  Medical Hygiene &amp; Privacy
+              <div className="border-l-2 border-brand-gold/60 pl-3 space-y-1">
+                <h3 className="font-serif text-sm font-bold text-brand-dark">
+                  Private Treatment Setting
                 </h3>
+                <p className="text-xs text-brand-muted leading-relaxed">
+                  Dedicated cubicles for comfortable, confidential manual therapy sessions.
+                </p>
               </div>
-              <p className="text-xs text-brand-muted leading-relaxed pl-12">
-                Equipped with private treatment cubicles and strict single-use sterile disposable needles for dry needling, maintaining the highest clinical sanitization standards.
-              </p>
             </div>
           </div>
         </div>

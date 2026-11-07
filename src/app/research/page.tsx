@@ -37,10 +37,8 @@ export default function ResearchPage() {
       <Breadcrumb items={[{ label: "Research & Science" }]} />
 
       {/* Hero Header */}
-      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#102B24] via-[#14342B] to-[#173D32] text-brand-ivory border-b border-brand-gold/30 relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
-
-        <Container className="relative z-10">
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#102B24] via-[#14342B] to-[#173D32] text-brand-ivory border-b border-brand-gold/30">
+        <Container>
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold-light text-xs font-semibold uppercase tracking-wider">
               <Microscope className="w-3.5 h-3.5 text-brand-gold" />
@@ -74,7 +72,7 @@ export default function ResearchPage() {
                 </h2>
 
                 <p className="text-sm sm:text-base text-brand-charcoal/90 leading-relaxed">
-                  Holding a <strong>Bachelor of Physiotherapy (BPT)</strong> degree and active as a postgraduate researcher within the <strong>School of Health Sciences at Garden City University</strong>, Dr. Farande is dedicated to the systematic investigation of musculoskeletal disorders and neuromuscular intervention efficacy.
+                  Holding <strong>BPT + MPT (Sports)</strong> qualifications and active in clinical research with the <strong>School of Health Sciences at Garden City University</strong>, Dr. Farande is dedicated to the systematic investigation of sports injuries, musculoskeletal disorders, and neuromuscular rehabilitation protocols.
                 </p>
 
                 <p className="text-sm sm:text-base text-brand-muted leading-relaxed">

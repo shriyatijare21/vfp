@@ -12,12 +12,8 @@ import {
 
 export function AppointmentCta() {
   return (
-    <section className="py-20 lg:py-24 bg-gradient-to-b from-[#14352C] to-[#102B24] text-brand-ivory relative overflow-hidden border-b border-brand-gold/30">
-      {/* Decorative ambient auras */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-80 h-80 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none" />
-
-      <Container className="relative z-10">
+    <section className="py-20 lg:py-24 bg-gradient-to-b from-[#14352C] to-[#102B24] text-brand-ivory relative border-b border-brand-gold/30">
+      <Container>
         <div className="max-w-4xl mx-auto text-center space-y-7">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold-light text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-brand-gold" />

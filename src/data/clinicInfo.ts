@@ -42,11 +42,11 @@ const defaultMessage = "Hello, I would like to enquire about an appointment at F
 export const clinicInfo: ClinicInfo = {
   name: "Farande Physiotherapy Clinic",
   doctorName: "Dr. Vaibhav Ashok Farande",
-  doctorTitle: "Consultant Physiotherapist",
-  doctorDegree: "BPT (Bachelor of Physiotherapy)",
+  doctorTitle: "Consultant Sports & Musculoskeletal Physiotherapist",
+  doctorDegree: "BPT + MPT (Sports)",
   doctorBio:
-    "Dr. Vaibhav Ashok Farande (PT) is an evidence-informed physiotherapist dedicated to restoring movement, relieving musculoskeletal pain, and helping individuals regain active, fulfilling lives. Combining clinical expertise with ongoing academic research, he offers personalized, compassionate rehabilitation tailored to each patient's individual needs.",
-  doctorResearchAffiliation: "School of Health Sciences, Garden City University (Postgraduate Researcher)",
+    "Dr. Vaibhav Ashok Farande (PT), BPT + MPT (Sports), is a consultant sports and musculoskeletal physiotherapist dedicated to restoring movement, relieving acute and chronic pain, and helping individuals regain active, fulfilling lives. Combining clinical expertise with ongoing academic research, he offers personalized, compassionate rehabilitation tailored to each patient's individual needs.",
+  doctorResearchAffiliation: "School of Health Sciences, Garden City University (Sports Physiotherapy Research)",
   tagline: "The caring hands you deserve.",
   phone: "+917030089050",
   phoneDisplay: "+91 70300 89050",

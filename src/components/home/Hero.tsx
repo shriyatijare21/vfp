@@ -19,10 +19,7 @@ import {
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#0F2620] via-[#133229] to-[#173D32] text-brand-ivory pt-12 pb-20 sm:pt-16 sm:pb-28 lg:pt-20 lg:pb-32 border-b border-brand-gold/30">
-      {/* Decorative background glows & ambient lighting */}
-      <div className="absolute top-1/4 right-10 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute -bottom-10 left-10 w-[420px] h-[420px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#C6A45C_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#C6A45C_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.03] pointer-events-none" />
 
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
@@ -93,7 +90,7 @@ export function Hero() {
                     Dr. Vaibhav Farande
                   </p>
                   <p className="text-[11px] text-brand-cream/60">
-                    BPT &bull; Researcher
+                    BPT + MPT (Sports)
                   </p>
                 </div>
               </div>
@@ -115,10 +112,7 @@ export function Hero() {
           {/* Right Column: Editorial Visual Showcase */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Gold double decorative frame */}
-              <div className="absolute -inset-2.5 rounded-3xl border border-brand-gold/30 -rotate-1 pointer-events-none" />
-
-              <div className="relative bg-brand-dark/90 rounded-2xl overflow-hidden border border-brand-gold/50 shadow-2xl p-6 sm:p-7 space-y-6 backdrop-blur-md">
+              <div className="relative bg-brand-dark/95 rounded-2xl overflow-hidden border border-brand-gold/40 shadow-2xl p-6 sm:p-7 space-y-6">
                 {/* Visual Graphic Representation */}
                 <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-brand-gold/30 bg-[#122F26] flex items-center justify-center group">
                   <Image
@@ -151,12 +145,12 @@ export function Hero() {
                       </h3>
                     </div>
                     <span className="text-xs px-2.5 py-1 rounded-full bg-brand-forest text-brand-gold-light border border-brand-gold/30 font-medium">
-                      BPT
+                      BPT + MPT (Sports)
                     </span>
                   </div>
 
                   <p className="text-xs text-brand-cream/70 leading-relaxed font-light">
-                    Postgraduate scholar at School of Health Sciences, Garden City University. Special focus on dry needling for tendinopathy &amp; conservative spine recovery.
+                    Postgraduate research background at Garden City University. Special focus on sports injury rehabilitation, dry needling &amp; conservative spine recovery.
                   </p>
                 </div>
 

@@ -55,7 +55,7 @@
     <text x="240" y="65" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, Cambria, serif" font-size="26" font-weight="normal">Dr. Vaibhav Ashok Farande</text>
     
     <!-- Degree & Title -->
-    <text x="240" y="96" text-anchor="middle" fill="#C6A45C" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" letter-spacing="0.5">BPT (Bachelor of Physiotherapy)</text>
+    <text x="240" y="96" text-anchor="middle" fill="#C6A45C" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" letter-spacing="0.5">BPT + MPT (Sports)</text>
     
     <!-- Academic Affiliation -->
     <text x="240" y="124" text-anchor="middle" fill="#EFE8DA" fill-opacity="0.85" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400">Postgraduate Scholar &bull; School of Health Sciences</text>

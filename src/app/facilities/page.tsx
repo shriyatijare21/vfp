@@ -47,10 +47,8 @@ export default function FacilitiesPage() {
       <Breadcrumb items={[{ label: "Facilities & Equipment" }]} />
 
       {/* Hero Header */}
-      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#102B24] via-[#14342B] to-[#173D32] text-brand-ivory border-b border-brand-gold/30 relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
-
-        <Container className="relative z-10">
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#102B24] via-[#14342B] to-[#173D32] text-brand-ivory border-b border-brand-gold/30">
+        <Container>
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold-light text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
@@ -74,7 +72,7 @@ export default function FacilitiesPage() {
           <div className="flex items-start gap-3 p-4 sm:p-5 rounded-2xl bg-brand-white border border-[#DECDB5] text-xs sm:text-sm text-brand-charcoal">
             <Info className="w-5 h-5 text-brand-forest shrink-0 mt-0.5" />
             <p className="leading-relaxed">
-              <strong>Patient Transparency Guarantee:</strong> We do not publish artificial stock photos or pretend generic imagery depicts our exact clinic. Below is an honest account of our verified clinical features and safety protocols at Sabnis Plot, Maltekdi. Any specialized modalities requiring pre-scheduling or confirmation are marked clearly.
+              <strong>Clinical Transparency Commitment:</strong> We do not publish artificial stock photos or pretend generic imagery depicts our exact clinic. Below is an honest account of our verified clinical features and safety protocols at Sabnis Plot, Maltekdi. Any specialized modalities requiring pre-scheduling or confirmation are marked clearly.
             </p>
           </div>
         </Container>
@@ -177,6 +175,38 @@ export default function FacilitiesPage() {
                     {item.description}
                   </p>
 
+                  {item.id === "consultation-cubicles" && (
+                    <div className="relative rounded-xl overflow-hidden border border-[#DECDB5] mt-2 group">
+                      <Image
+                        src="/images/facilities/physiotherapy-treatment-room.jpg"
+                        alt="Private assessment and treatment plinths at Farande Physiotherapy Clinic"
+                        width={1600}
+                        height={1000}
+                        className="w-full h-44 object-cover object-center transition-transform duration-500 group-hover:scale-102"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 bg-brand-dark/85 px-3 py-1.5 text-[10px] text-brand-ivory flex justify-between items-center">
+                        <span>Private Treatment Room</span>
+                        <span className="text-brand-gold-light">Shop No. 3, Maltekdi</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {item.id === "electrotherapy-unit" && (
+                    <div className="relative rounded-xl overflow-hidden border border-[#DECDB5] mt-2 group">
+                      <Image
+                        src="/images/equipment/therapy-equipment.jpg"
+                        alt="Clinical electrotherapy and rehabilitation equipment at Farande Physiotherapy Clinic"
+                        width={1066}
+                        height={800}
+                        className="w-full h-44 object-cover object-center transition-transform duration-500 group-hover:scale-102"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 bg-brand-dark/85 px-3 py-1.5 text-[10px] text-brand-ivory flex justify-between items-center">
+                        <span>Active Electrotherapy Units</span>
+                        <span className="text-brand-gold-light">Amravati Premises</span>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="pt-2">
                     <span className="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider block mb-2">
                       Key Highlights:
@@ -216,7 +246,7 @@ export default function FacilitiesPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left">
               <div className="p-4 rounded-xl bg-brand-forest/60 border border-brand-gold/25 space-y-1">
                 <span className="text-xs font-bold text-brand-gold uppercase tracking-wider block">
-                  100% Single-Use
+                  Single-Use Sterile
                 </span>
                 <p className="text-xs text-brand-cream/70">
                   Sterile filiform needles discarded immediately after each session.
