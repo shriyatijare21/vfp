@@ -24,14 +24,14 @@ export function DoctorIntro() {
               <div className="absolute -inset-3 rounded-3xl border-2 border-brand-gold/40 transform rotate-1 pointer-events-none" />
 
               <div className="relative rounded-2xl overflow-hidden bg-brand-dark border border-brand-gold/60 shadow-luxury p-6 text-center space-y-6">
-                {/* Photo Placeholder Graphic */}
+                {/* Doctor Photograph */}
                 <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-gold/40 bg-[#14342B] group">
                   <Image
-                    src="/images/placeholders/doctor-portrait.svg"
+                    src="/images/doctor/dr-vaibhav-farande.jpg"
                     alt="Dr. Vaibhav Ashok Farande PT - Consultant Physiotherapist"
-                    width={400}
-                    height={500}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    width={408}
+                    height={612}
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute top-3 right-3 bg-brand-dark/90 text-brand-gold-light text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full border border-brand-gold/30">
                     BPT Qualified

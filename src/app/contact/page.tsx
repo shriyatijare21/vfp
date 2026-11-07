@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/contact/ContactForm";
@@ -71,6 +72,34 @@ export default function ContactPage() {
                 <p className="text-sm text-brand-muted leading-relaxed">
                   Led by Dr. Vaibhav Ashok Farande (PT), providing personalized physical therapy in a clean, professional, and private clinic setting.
                 </p>
+              </div>
+
+              {/* Clinic Photos Preview */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative h-32 rounded-xl overflow-hidden border border-[#DECDB5] group">
+                  <Image
+                    src="/images/clinic/clinic-exterior.jpg"
+                    alt="Farande Physiotherapy Clinic Maltekdi entrance"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-brand-dark/80 px-2 py-1 text-[10px] text-brand-ivory font-medium">
+                    Clinic Facade
+                  </div>
+                </div>
+                <div className="relative h-32 rounded-xl overflow-hidden border border-[#DECDB5] group">
+                  <Image
+                    src="/images/clinic/clinic-reception.jpg"
+                    alt="Reception and waiting lounge at Farande Physiotherapy Clinic"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-brand-dark/80 px-2 py-1 text-[10px] text-brand-ivory font-medium">
+                    Reception Lounge
+                  </div>
+                </div>
               </div>
 
               {/* Contact Cards */}

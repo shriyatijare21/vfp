@@ -2,11 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Menu, X, Phone, MessageSquare, HeartPulse } from "lucide-react";
+import { Menu, X, Phone, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -94,8 +95,15 @@ export function Navbar() {
           aria-label="Farande Physiotherapy Clinic - Return to homepage"
           className="flex items-center gap-2.5 sm:gap-3 group shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded-xl p-1"
         >
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-brand-forest text-brand-gold flex items-center justify-center border border-brand-gold/40 shadow-sm transition-transform duration-300 group-hover:scale-105 shrink-0">
-            <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-white flex items-center justify-center border border-brand-gold/50 shadow-sm transition-transform duration-300 group-hover:scale-105 shrink-0 relative p-0.5">
+            <Image
+              src="/images/logo/clinic-logo.png"
+              alt="Farande Physiotherapy Clinic official logo"
+              width={44}
+              height={44}
+              className="w-full h-full object-contain"
+              priority
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-serif text-lg sm:text-2xl font-bold tracking-tight text-brand-forest leading-none group-hover:text-brand-dark transition-colors">

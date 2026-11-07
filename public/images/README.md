@@ -33,7 +33,12 @@ This directory is organized into dedicated subfolders for managing and integrati
 * **Purpose:** Real hands-on physical therapy session photographs.
 * **Compliance Requirement:** Must have signed patient medical photography consent on file before publication.
 
-### 6. `/public/images/hero/`
+### 6. `/public/images/logo/`
+* **Target File:** `clinic-logo.svg` or `clinic-logo.png`
+* **Purpose:** Official clinic emblem and brand mark for the navigation header, footer, favicon, and print/letterhead documentation.
+* **Recommended Specs:** Vector `.svg` with transparent background (or high-resolution 300 DPI transparent `.png`, minimum 512 × 512 px).
+
+### 7. `/public/images/hero/`
 * **Active Files:** `clinic-og.svg` (Active 1200 × 630 px social sharing banner)
 * **Future Replacement:** `hero-treatment.jpg`
 

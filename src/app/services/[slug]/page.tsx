@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { servicesData } from "@/data/services";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
@@ -129,6 +130,39 @@ export default function ServiceDetailPage({ params }: Props) {
                 <p className="text-base sm:text-lg text-brand-charcoal/90 leading-relaxed">
                   {service.overview}
                 </p>
+
+                {/* Service Real In-Action Photograph */}
+                {service.slug === "dry-needling" && (
+                  <div className="relative rounded-2xl overflow-hidden border border-brand-gold/40 shadow-luxury bg-[#102B24] my-6 group">
+                    <Image
+                      src="/images/treatments/dry-needling-procedure.jpg"
+                      alt="Clinical dry needling procedure performed at Farande Physiotherapy Clinic"
+                      width={848}
+                      height={478}
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-102"
+                    />
+                    <div className="bg-brand-dark/90 p-3 px-4 border-t border-brand-gold/30 flex items-center justify-between text-xs text-brand-ivory">
+                      <span className="font-medium">Clinical Procedure: Sterile Trigger Point Dry Needling</span>
+                      <span className="text-[11px] text-brand-gold-light">Farande Physiotherapy Clinic</span>
+                    </div>
+                  </div>
+                )}
+
+                {service.slug === "electrotherapy" && (
+                  <div className="relative rounded-2xl overflow-hidden border border-brand-gold/40 shadow-luxury bg-[#102B24] my-6 group">
+                    <Image
+                      src="/images/equipment/therapy-equipment.jpg"
+                      alt="Clinical electrotherapy devices and modalities at Farande Physiotherapy Clinic"
+                      width={1066}
+                      height={1600}
+                      className="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-102"
+                    />
+                    <div className="bg-brand-dark/90 p-3 px-4 border-t border-brand-gold/30 flex items-center justify-between text-xs text-brand-ivory">
+                      <span className="font-medium">In-Clinic Electrotherapy & Rehabilitation Unit</span>
+                      <span className="text-[11px] text-brand-gold-light">Amravati Premises</span>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Conditions Treated */}

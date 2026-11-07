@@ -84,22 +84,22 @@ export default function FacilitiesPage() {
       <section className="py-16 bg-[#FBF8F2] border-b border-[#E7DDCA]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Visual Architectural Placeholder Frame */}
+            {/* Clinic Treatment Room Photograph */}
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden border border-brand-gold/40 shadow-luxury bg-[#102B24] group">
                 <Image
-                  src="/images/placeholders/clinic-interior.svg"
-                  alt="Architectural schematic layout of treatment cubicles and rehabilitation suites at Farande Physiotherapy Clinic Amravati"
-                  width={640}
-                  height={400}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="/images/facilities/physiotherapy-treatment-room.jpg"
+                  alt="Private physiotherapy treatment room and consultation plinths at Farande Physiotherapy Clinic Amravati"
+                  width={1600}
+                  height={1200}
+                  className="w-full h-80 sm:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute bottom-3 left-3 right-3 bg-brand-dark/90 p-3 rounded-xl border border-brand-gold/30 text-xs text-brand-ivory flex items-center justify-between">
                   <span className="font-medium">
                     Shop No. 3, Mahakali Enclave, Maltekdi
                   </span>
                   <span className="text-[11px] text-brand-gold-light">
-                    Private Cubicles
+                    Private Treatment Room
                   </span>
                 </div>
               </div>

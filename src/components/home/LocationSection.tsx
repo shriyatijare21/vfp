@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -36,9 +37,22 @@ export function LocationSection() {
                 <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-1">
                   Clinical Center
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-brand-dark">
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-4">
                   {clinicInfo.name}
                 </h3>
+                <div className="relative w-full h-44 rounded-2xl overflow-hidden border border-[#DECDB5] mb-5 group">
+                  <Image
+                    src="/images/clinic/clinic-exterior.jpg"
+                    alt="Farande Physiotherapy Clinic entrance and signboard at Shop No. 3, Mahakali Enclave, Maltekdi Amravati"
+                    width={1600}
+                    height={1200}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-2 left-2 right-2 bg-brand-dark/85 px-3 py-1.5 rounded-lg text-[11px] text-brand-ivory flex justify-between items-center backdrop-blur-xs">
+                    <span>Maltekdi, Amravati</span>
+                    <span className="text-brand-gold-light text-[10px]">Clinic Entrance</span>
+                  </div>
+                </div>
               </div>
 
               {/* Address Block */}

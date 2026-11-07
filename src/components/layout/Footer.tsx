@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { clinicInfo } from "@/data/clinicInfo";
 import { Container } from "@/components/ui/Container";
@@ -10,7 +11,6 @@ import {
   Phone,
   Clock,
   ExternalLink,
-  HeartPulse,
   ArrowUpRight,
   ShieldCheck,
 } from "lucide-react";
@@ -64,8 +64,14 @@ export function Footer() {
           {/* Clinic Brand & Doctor Bio */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-brand-forest text-brand-gold flex items-center justify-center border border-brand-gold/40">
-                <HeartPulse className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-full overflow-hidden bg-white flex items-center justify-center border border-brand-gold/40 shrink-0 p-0.5">
+                <Image
+                  src="/images/logo/clinic-logo.png"
+                  alt="Farande Physiotherapy Clinic official logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <span className="font-serif text-xl font-bold tracking-tight text-brand-ivory block">
