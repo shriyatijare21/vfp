@@ -113,19 +113,19 @@ export function Hero() {
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative bg-brand-dark/95 rounded-2xl overflow-hidden border border-brand-gold/40 shadow-2xl p-6 sm:p-7 space-y-6">
-                {/* Visual Graphic Representation */}
+                {/* Genuine Clinic Treatment Suite Photograph */}
                 <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-brand-gold/30 bg-[#122F26] flex items-center justify-center group">
                   <Image
-                    src="/images/placeholders/hero-graphic.svg"
-                    alt="Biomechanical spine and neuromuscular movement diagram - Farande Physiotherapy Clinic"
-                    width={500}
-                    height={375}
+                    src="/images/hero/hero-treatment.jpg"
+                    alt="Farande Physiotherapy Clinic treatment room and consultation plinths in Amravati"
+                    width={800}
+                    height={600}
                     priority
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-3 left-3 right-3 bg-brand-dark/85 backdrop-blur-md p-2.5 rounded-lg border border-brand-gold/30 flex items-center justify-between text-xs">
+                  <div className="absolute bottom-3 left-3 right-3 bg-brand-dark/90 backdrop-blur-md p-2.5 rounded-lg border border-brand-gold/30 flex items-center justify-between text-xs">
                     <span className="text-brand-ivory font-medium">
-                      Consultant Physiotherapy
+                      Consultant Treatment Suite
                     </span>
                     <span className="text-brand-gold-light font-semibold text-[11px]">
                       Sabnis Plot, Maltekdi

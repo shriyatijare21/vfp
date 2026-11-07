@@ -39,8 +39,7 @@ This directory is organized into dedicated subfolders for managing and integrati
 * **Recommended Specs:** Vector `.svg` with transparent background (or high-resolution 300 DPI transparent `.png`, minimum 512 × 512 px).
 
 ### 7. `/public/images/hero/`
-* **Active Files:** `clinic-og.svg` (Active 1200 × 630 px social sharing banner)
-* **Future Replacement:** `hero-treatment.jpg`
+* **Active Files:** `hero-treatment.jpg` (Active genuine clinic consultation suite photograph for the homepage hero card), `clinic-og.svg` (Active 1200 × 630 px social sharing banner)
 
 ---
 
